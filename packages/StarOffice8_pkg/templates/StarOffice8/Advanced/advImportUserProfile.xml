@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+	<resImport apt:packagePath="com.sun.star8.apoc.policies.resource.staroffice_policies" />
+	<category apt:name="StarOffice8" apt:label="SO.so8" apt:inlineHelp="SO.cat_staroffice_help">
+		<category apt:name="Advanced" apt:label="SO.adv" apt:inlineHelp="SO.cat_advanced_help">
+			<page apt:name="ImportUserProfile" apt:label="SO.adv.import_profile" apt:inlineHelp="SO.page_import_profile_help" apt:onlineHelp="/StarOffice8/Advanced/advImportUserProfile">
+				<section apt:name="LDAPSettings" apt:label="SO.adv.import_settings">
+					<property apt:name="Server" apt:label="SO.adv.ldap_server" apt:dataPath="org.openoffice.LDAP/UserDirectory/ServerDefinition/Server" oor:type="xs:string">
+						<value />
+					</property>
+					<property apt:name="Port" apt:label="SO.adv.ldap_port" apt:dataPath="org.openoffice.LDAP/UserDirectory/ServerDefinition/Port" oor:type="xs:int">
+						<value>389</value>
+					</property>
+					<property apt:name="BaseDN" apt:label="SO.adv.ldap_basedn" apt:dataPath="org.openoffice.LDAP/UserDirectory/ServerDefinition/BaseDN" oor:type="xs:string">
+						<value />
+					</property>
+					<property apt:name="SearchUser" apt:label="SO.adv.ldap_searchuser" apt:dataPath="org.openoffice.LDAP/UserDirectory/SearchUser" oor:type="xs:string">
+						<value />
+					</property>
+					<property apt:name="SearchPassword" apt:label="SO.adv.ldap_searchpwd" apt:dataPath="org.openoffice.LDAP/UserDirectory/SearchPassword" oor:type="xs:string">
+						<value />
+						<visual apt:type="password" />
+					</property>
+					<property apt:name="UserObjectClass" apt:label="SO.adv.ldap_class" apt:dataPath="org.openoffice.LDAP/UserDirectory/UserObjectClass" oor:type="xs:string">
+						<value />
+					</property>
+					<property apt:name="UserUniqueAttribute" apt:label="SO.adv.ldap_attr" apt:dataPath="org.openoffice.LDAP/UserDirectory/UserUniqueAttribute" oor:type="xs:string">
+						<value />
+					</property>
+					<property apt:name="Mapping" apt:label="SO.adv.ldap_mapping" apt:dataPath="org.openoffice.LDAP/UserDirectory/Mapping" oor:type="xs:string">
+						<value />
+					</property>
+				</section>
+			</page>
+		</category>
+	</category>
+</apt:template>

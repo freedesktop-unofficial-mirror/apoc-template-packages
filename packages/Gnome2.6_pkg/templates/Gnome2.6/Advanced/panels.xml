@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+	<resImport apt:packagePath="org.gnome26.apoc.policies.resource.gnome_policies" />
+	<category apt:name="Gnome2.6" apt:label="GNOME.gno2.6" apt:inlineHelp="GNOME.cat_gnome_help">
+		<category apt:name="Advanced" apt:label="GNOME.advanced" apt:inlineHelp="GNOME.cat_advanced_help">
+			<page apt:name="Panels" apt:label="GNOME.panels" apt:inlineHelp="GNOME.page_panels_help" apt:onlineHelp="/Gnome2.6/Advanced/panels">
+				<section apt:name="ToolTips" apt:label="GNOME.tooltips">
+					<property apt:dataPath="org.gnome.apps.panel/global/tooltips_enabled" apt:name="EnableTooltips" apt:label="GNOME.enable_tooltips" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+                                <section apt:name="Clock" apt:label="GNOME.clock">
+					<property apt:dataPath="org.gnome.apps.panel/profiles/default/applets/clock/locked" apt:name="LockedClock" apt:label="GNOME.locked" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.gnome.apps.panel/profiles/default/applets/clock/position" apt:name="PositionClock" apt:label="GNOME.position" oor:type="xs:int">
+						<value>10</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.panel/profiles/default/applets/clock/prefs/format" apt:name="HourFormat" apt:label="GNOME.hour_format" oor:type="xs:string">
+						<constraints>
+							<enumeration oor:value="12-hour" />
+							<enumeration oor:value="24-hour" />
+							<enumeration oor:value="internet" />
+							<enumeration oor:value="unix" />
+						</constraints>
+						<value>12-hour</value>
+						<visual apt:type="comboBox" />
+					</property>
+					<property apt:dataPath="org.gnome.apps.panel/profiles/default/applets/clock/prefs/show_date" apt:name="ShowDate" apt:label="GNOME.show_date" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.gnome.apps.panel/profiles/default/applets/clock/prefs/show_seconds" apt:name="ShowSeconds" apt:label="GNOME.show_secs" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<section apt:name="NetworkMonitor" apt:label="GNOME.net_monitor">
+					<property apt:dataPath="org.gnome.apps.panel/profiles/default/applets/network_monitor/locked" apt:name="LockedMonitor" apt:label="GNOME.locked" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.gnome.apps.panel/profiles/default/applets/network_monitor/position" apt:name="PositionMonitor" apt:label="GNOME.position" oor:type="xs:int">
+						<value>3</value>
+					</property>
+				</section>
+				<section apt:name="WindowsList" apt:label="GNOME.win_list">
+					<property apt:dataPath="org.gnome.apps.panel/profiles/default/applets/window_list/locked" apt:name="LockedWindow" apt:label="GNOME.locked" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.gnome.apps.panel/profiles/default/applets/window_list/position" apt:name="PositionWindow" apt:label="GNOME.position" oor:type="xs:int">
+						<value>20</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.panel/profiles/default/applets/window_list/prefs/minimum_size" apt:name="MinSize" apt:label="GNOME.min_size" oor:type="xs:int">
+						<value>50</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.panel/profiles/default/applets/window_list/prefs/maximum_size" apt:name="MaxSize" apt:label="GNOME.max_size" oor:type="xs:int">
+						<value>4096</value>
+					</property>
+				</section>
+				<section apt:name="WorkspaceSwitcher" apt:label="GNOME.ws_switcher">
+					<property apt:dataPath="org.gnome.apps.panel/profiles/default/applets/workspace_switcher/locked" apt:name="LockedSwitcher" apt:label="GNOME.locked" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.gnome.apps.panel/profiles/default/applets/workspace_switcher/position" apt:name="PositionSwitcher" apt:label="GNOME.position" oor:type="xs:int">
+						<value>0</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.panel/profiles/default/applets/workspace_switcher/prefs/num_rows" apt:name="NumRows" apt:label="GNOME.num_rows" oor:type="xs:int">
+						<value>1</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.panel/profiles/default/applets/workspace_switcher/prefs/display_all_workspaces" apt:name="ShowAllWorkspaces" apt:label="GNOME.show_all_ws" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.gnome.apps.panel/profiles/default/applets/workspace_switcher/prefs/display_workspace_names" apt:name="ShowWorkspaceNames" apt:label="GNOME.show_ws_names" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<section apt:name="Taskbar" apt:label="GNOME.taskbar">
+					<property apt:dataPath="org.gnome.apps.panel/profiles/default/toplevels/bottom_panel/size" apt:name="Size" apt:label="GNOME.size" oor:type="xs:int">
+						<value>24</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.panel/profiles/default/toplevels/bottom_panel/auto_hide" apt:name="AutoHide" apt:label="GNOME.auto_hide" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.gnome.apps.panel/profiles/default/toplevels/bottom_panel/orientation" apt:name="Orientation" apt:label="GNOME.orientation" oor:type="xs:string">
+						<constraints>
+							<enumeration oor:value="top" />
+							<enumeration oor:value="bottom" />
+							<enumeration oor:value="left" />
+							<enumeration oor:value="right" />
+						</constraints>
+						<value>bottom</value>
+						<visual apt:type="comboBox" />
+					</property>
+				</section>
+				<set apt:name="AppletList" apt:label="GNOME.applet_list" apt:dataPath="org.gnome.apps.panel/profiles/default/applets">
+					<page apt:name="AppletLockdown" apt:label="GNOME.applet_lock" apt:inlineHelp="GNOME.page_applet_lock_help" apt:onlineHelp="/Gnome2.6/Advanced/panels">
+						<section apt:name="Lockdown" apt:label="GNOME.lockdown">
+							<property apt:name="Lock" apt:label="GNOME.locked" apt:dataPath="./$queriedId/locked" oor:type="xs:boolean">
+								<visual>
+									<checkBox />
+								</visual>
+							</property>
+							<property apt:name="Position" apt:label="GNOME.position" apt:dataPath="./$queriedId/position" oor:type="xs:int" />
+						</section>
+					</page>
+				</set>
+			</page>
+		</category>
+	</category>
+</apt:template>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+	<resImport apt:packagePath="org.gnome26.apoc.policies.resource.gnome_policies" />
+	<category apt:name="Gnome2.6" apt:label="GNOME.gno2.6" apt:inlineHelp="GNOME.cat_gnome_help">
+		<category apt:name="Keyboard" apt:label="GNOME.keyboard" apt:inlineHelp="GNOME.cat_keyboard_help">
+			<page apt:name="CommandShortcuts" apt:label="GNOME.cmd_sc" apt:inlineHelp="GNOME.page_cmd_sc_help" apt:onlineHelp="/Gnome2.6/Keyboard/commandShortcuts">
+				<section apt:name="CommandKeys" apt:label="GNOME.cmd_keys">
+					<property apt:dataPath="org.gnome.apps.metacity/global_keybindings/run_command_1" apt:name="RunCmd1" apt:label="GNOME.run_cmd1" oor:type="xs:string" apt:inlineHelp="GNOME.run_command_1_help">
+						<value>disabled</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/global_keybindings/run_command_2" apt:name="RunCmd2" apt:label="GNOME.run_cmd2" oor:type="xs:string">
+						<value>disabled</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/global_keybindings/run_command_3" apt:name="RunCmd3" apt:label="GNOME.run_cmd3" oor:type="xs:string">
+						<value>disabled</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/global_keybindings/run_command_4" apt:name="RunCmd4" apt:label="GNOME.run_cmd4" oor:type="xs:string">
+						<value>disabled</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/global_keybindings/run_command_5" apt:name="RunCmd5" apt:label="GNOME.run_cmd5" oor:type="xs:string">
+						<value>disabled</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/global_keybindings/run_command_6" apt:name="RunCmd6" apt:label="GNOME.run_cmd6" oor:type="xs:string">
+						<value>disabled</value>
+					</property>
+				</section>
+				<section apt:name="Commands" apt:label="GNOME.cmds">
+					<property apt:dataPath="org.gnome.apps.metacity/keybinding_commands/command_1" apt:name="Cmd1" apt:label="GNOME.cmd1" oor:type="xs:string">
+						<value />
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/keybinding_commands/command_2" apt:name="Cmd2" apt:label="GNOME.cmd2" oor:type="xs:string">
+						<value />
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/keybinding_commands/command_3" apt:name="Cmd3" apt:label="GNOME.cmd3" oor:type="xs:string">
+						<value />
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/keybinding_commands/command_4" apt:name="Cmd4" apt:label="GNOME.cmd4" oor:type="xs:string">
+						<value />
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/keybinding_commands/command_5" apt:name="Cmd5" apt:label="GNOME.cmd5" oor:type="xs:string">
+						<value />
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/keybinding_commands/command_6" apt:name="Cmd6" apt:label="GNOME.cmd6" oor:type="xs:string">
+						<value />
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/keybinding_commands/command_screenshot" apt:name="ScreenshotCmd" apt:label="GNOME.cmd_scrnshot" oor:type="xs:string">
+						<value>gnome-panel-screenshot</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/keybinding_commands/command_window_screenshot" apt:name="WindowScreenshotCmd" apt:label="GNOME.cmd_win_scrnshot" oor:type="xs:string">
+						<value>gnome-panel-screenshot --window</value>
+					</property>
+				</section>
+			</page>
+		</category>
+	</category>
+</apt:template>

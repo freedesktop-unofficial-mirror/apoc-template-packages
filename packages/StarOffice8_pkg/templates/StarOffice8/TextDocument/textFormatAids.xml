@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+	<resImport apt:packagePath="com.sun.star8.apoc.policies.resource.staroffice_policies" />
+	<category apt:name="StarOffice8" apt:label="SO.so8" apt:inlineHelp="SO.cat_staroffice_help">
+		<category apt:name="TextDocument" apt:label="SO.textDocument" apt:inlineHelp="SO.textDocument_help">
+			<page apt:name="FormattingAids" apt:label="SO.text.page_faids" apt:inlineHelp="SO.text.page_faids_help" apt:onlineHelp="/StarOffice8/TextDocument/textFormatAids">
+				<section apt:name="DisplayOf" apt:label="SO.text.sect_dispof">
+					<property apt:dataPath="org.openoffice.Office.Writer/Content/NonprintingCharacter/ParagraphEnd" apt:name="ParagraphEnd" apt:label="SO.text.dispof_para" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/Content/NonprintingCharacter/OptionalHyphen" apt:name="CustomHyphens" apt:label="SO.text.dispof_hyphens" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/Content/NonprintingCharacter/Space" apt:name="Spaces" apt:label="SO.text.dispof_spaces" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/Content/NonprintingCharacter/ProtectedSpace" apt:name="NonBreakingSpaces" apt:label="SO.text.dispof_non" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/Content/NonprintingCharacter/Tab" apt:name="Tabs" apt:label="SO.text.dispof_tabs" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/Content/NonprintingCharacter/Break" apt:name="Breaks" apt:label="SO.text.dispof_breaks" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/Content/NonprintingCharacter/HiddenCharacter" apt:name="HiddenChars" apt:label="SO.text.dispof_hid_char" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/Content/NonprintingCharacter/HiddenText" apt:name="HiddenText" apt:label="SO.text.dispof_hid_text" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/Content/NonprintingCharacter/HiddenParagraph" apt:name="HiddenParagraphs" apt:label="SO.text.dispof_hid_para" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<section apt:name="DirectCursorSection" apt:label="SO.text.sect_cursor">
+					<property apt:dataPath="org.openoffice.Office.Writer/Cursor/DirectCursor/UseDirectCursor" apt:name="DirectCursor" apt:label="SO.text.cursor_direct" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/Cursor/DirectCursor/Insert" apt:name="Insert" apt:label="SO.text.cursor_insert" oor:type="xs:int">
+						<constraints>
+							<enumeration oor:value="2" />
+							<enumeration oor:value="3" />
+							<enumeration oor:value="0" />
+							<enumeration oor:value="1" />
+						</constraints>
+						<value>2</value>
+						<visual apt:type="radioButtons" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/Cursor/Option/ProtectedArea" apt:name="EnableCursorInProtectedAreas" apt:label="SO.text.cursor_areas" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+			</page>
+		</category>
+	</category>
+</apt:template>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+	<resImport apt:packagePath="com.sun.star8.apoc.policies.resource.staroffice_policies" />
+	<category apt:name="StarOffice8" apt:label="SO.so8" apt:inlineHelp="SO.cat_staroffice_help">
+		<category apt:name="TextDocument" apt:label="SO.textDocument" apt:inlineHelp="SO.textDocument_help">
+			<page apt:name="Fonts" apt:label="SO.text.fonts" apt:inlineHelp="SO.text.fonts_help" apt:onlineHelp="/StarOffice8/TextDocument/textFonts">
+				<section apt:name="BasicFonts" apt:label="SO.text.fonts_basic">
+					<property apt:dataPath="org.openoffice.Office.Writer/DefaultFont/Standard" apt:name="Default" apt:label="SO.text.fonts_def" oor:type="xs:string" apt:inlineHelp="SO.text.fonts_def_help">
+						<constraints>
+							<enumeration oor:value="Albany" />
+							<enumeration oor:value="Andale Sans" />
+							<enumeration oor:value="Andale Sans UI" />
+							<enumeration oor:value="Arial Black" />
+							<enumeration oor:value="Arial Narrow" />
+							<enumeration oor:value="Avant Garde Gothic" />
+							<enumeration oor:value="Baekmuk Batang" />
+							<enumeration oor:value="Baekmuk Dotum" />
+							<enumeration oor:value="Baekmuk Gulim" />
+							<enumeration oor:value="Baekmuk Headline" />
+							<enumeration oor:value="Bitstream Charter" />
+							<enumeration oor:value="Bitstream Vera Sans" />
+							<enumeration oor:value="Bitstream Vera Sans Mono" />
+							<enumeration oor:value="Bitstream Vera Serif" />
+							<enumeration oor:value="Bookman" />
+							<enumeration oor:value="Broadway" />
+							<enumeration oor:value="Century Schoolbook L" />
+							<enumeration oor:value="Charter" />
+							<enumeration oor:value="Courier" />
+							<enumeration oor:value="Cumberland" />
+							<enumeration oor:value="Dingbats" />
+							<enumeration oor:value="FreeMono" />
+							<enumeration oor:value="FreeSans" />
+							<enumeration oor:value="FreeSerif" />
+							<enumeration oor:value="FZFangSongTi" />
+							<enumeration oor:value="FZHeiTi" />
+							<enumeration oor:value="FZKaiTi" />
+							<enumeration oor:value="FZSongTi" />
+							<enumeration oor:value="Garamond" />
+							<enumeration oor:value="Goha Tibeb Zemen" />
+							<enumeration oor:value="Helvetica" />
+							<enumeration oor:value="Imprint MT Shadow" />
+							<enumeration oor:value="Kidprint" />
+							<enumeration oor:value="Lucidabright" />
+							<enumeration oor:value="Lucidasans" />
+							<enumeration oor:value="Lucidatypewriter" />
+							<enumeration oor:value="Luxi Mono" />
+							<enumeration oor:value="Luxi Sans" />
+							<enumeration oor:value="Luxi Serif" />
+							<enumeration oor:value="New Century Schoolbook" />
+							<enumeration oor:value="Nimbus Mono L" />
+							<enumeration oor:value="Nimbus Roman No9 L" />
+							<enumeration oor:value="Nimbus Sans L" />
+							<enumeration oor:value="OmegaSerif88591" />
+							<enumeration oor:value="OmegaSerif88592" />
+							<enumeration oor:value="OmegaSerif88593" />
+							<enumeration oor:value="OmegaSerif88594" />
+							<enumeration oor:value="OmegaSerif88595" />
+							<enumeration oor:value="OmegaSerifVISCII" />
+							<enumeration oor:value="Palace Script" />
+							<enumeration oor:value="Palatino" />
+							<enumeration oor:value="Sheffield" />
+							<enumeration oor:value="Standard Symbols L" />
+							<enumeration oor:value="StarSymbol" />
+							<enumeration oor:value="Sundotum" />
+							<enumeration oor:value="Sundotumche" />
+							<enumeration oor:value="Symbol" />
+							<enumeration oor:value="Thorndale" />
+							<enumeration oor:value="Times" />
+							<enumeration oor:value="URW Bookman L" />
+							<enumeration oor:value="URW Chancery L" />
+							<enumeration oor:value="URW Gothic L" />
+							<enumeration oor:value="URW Palladio L" />
+							<enumeration oor:value="Utopia" />
+							<enumeration oor:value="Zapf Chancery" />
+							<enumeration oor:value="Zapf Dingbats" />
+						</constraints>
+						<value>Thorndale</value>
+						<visual>
+							<chooser apt:labelPopup="APOC.font.chooser.title" apt:dataPath="com.sun.apoc.manager/StarOffice/Choosers/Fonts" />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/DefaultFont/Heading" apt:name="Headings" apt:label="SO.text.fonts_head" oor:type="xs:string" apt:inlineHelp="SO.text.fonts_head_help">
+						<value>Albany</value>
+						<visual>
+							<chooser apt:extendsChooser="/StarOffice8/TextDocument/Fonts/BasicFonts/Default" />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/DefaultFont/List" apt:name="Lists" apt:label="SO.text.fonts_list" oor:type="xs:string" apt:inlineHelp="SO.text.fonts_list_help">
+						<value>Thorndale</value>
+						<visual>
+							<chooser apt:extendsChooser="/StarOffice8/TextDocument/Fonts/BasicFonts/Default" />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/DefaultFont/Caption" apt:name="Captions" apt:label="SO.text.fonts_caption" oor:type="xs:string" apt:inlineHelp="SO.text.fonts_caption_help">
+						<value>Thorndale</value>
+						<visual>
+							<chooser apt:extendsChooser="/StarOffice8/TextDocument/Fonts/BasicFonts/Default" />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/DefaultFont/Index" apt:name="Index" apt:label="SO.text.fonts_index" oor:type="xs:string" apt:inlineHelp="SO.text.fonts_index_help">
+						<value>Thorndale</value>
+						<visual>
+							<chooser apt:extendsChooser="/StarOffice8/TextDocument/Fonts/BasicFonts/Default" />
+						</visual>
+					</property>
+				</section>
+			</page>
+		</category>
+	</category>
+</apt:template>

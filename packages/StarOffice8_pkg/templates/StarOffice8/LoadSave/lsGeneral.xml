@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+	<resImport apt:packagePath="com.sun.star8.apoc.policies.resource.staroffice_policies" />
+	<category apt:name="StarOffice8" apt:label="SO.so8" apt:inlineHelp="SO.cat_staroffice_help">
+		<category apt:name="LoadSave" apt:label="SO.load_save" apt:inlineHelp="SO.ls.cat_load_save_help">
+			<page apt:name="General" apt:label="SO.ls.general" apt:inlineHelp="SO.page_general_help" apt:onlineHelp="/StarOffice8/LoadSave/lsGeneral">
+				<section apt:name="Load" apt:label="SO.ls.sect_gen_load">
+					<property apt:dataPath="org.openoffice.Office.Common/Load/UserDefinedSettings" apt:name="LoadUserSettings" apt:label="SO.ls.load_user" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<section apt:name="Save" apt:label="SO.ls.save">
+					<property apt:dataPath="org.openoffice.Office.Common/Save/Document/EditProperty" apt:name="EditPropertiesBeforeSaving" apt:label="SO.ls.save_edit" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Save/Document/CreateBackup" apt:name="Backup" apt:label="SO.ls.backup" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Recovery/AutoSave/Enabled" apt:name="AutoSaveEvery" apt:label="SO.ls.save_auto" apt:xmlHandler="switchStateAutoSave" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Recovery/AutoSave/TimeIntervall" apt:name="AutoSaveTimeInterval" apt:label="SO.ls.save_every" oor:type="xs:int">
+						<value>15</value>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Save/Document/PrettyPrinting" apt:name="NoPrettyPrinting" apt:label="SO.ls.save_printing" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:name="ShowAlienFilterWarning" apt:label="SO.adv.filter_warn" apt:dataPath="org.openoffice.Office.Common/Save/Document/WarnAlienFormat" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<section apt:name="SaveURLsRelativeTo" apt:label="SO.ls.sect_urls">
+					<property apt:dataPath="org.openoffice.Office.Common/Save/URL/FileSystem" apt:name="FileSystem" apt:label="SO.ls.urls_file" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Save/URL/Internet" apt:name="Internet" apt:label="SO.ls.urls_internet" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<section apt:name="SaveFormat" apt:label="SO.ls.sect_save_format">
+					<property apt:dataPath="org.openoffice.Setup/Office/Factories/com.sun.star.text.TextDocument/ooSetupFactoryDefaultFilter" apt:name="TextDocumentDefaultFilter" apt:label="SO.ls.def_filter_text" oor:type="xs:string">
+						<constraints>
+							<enumeration oor:value="HTML (StarWriter)" />
+							<enumeration oor:value="MS Word 2003 XML" />
+							<enumeration oor:value="MS WinWord 6.0" />
+							<enumeration oor:value="MS Word 95" />
+							<enumeration oor:value="MS Word 97" />
+							<enumeration oor:value="writer8" />
+							<enumeration oor:value="PocketWord File" />
+							<enumeration oor:value="Rich Text Format" />
+							<enumeration oor:value="StarOffice XML (Writer)" />
+							<enumeration oor:value="StarWriter 3.0" />
+							<enumeration oor:value="StarWriter 4.0" />
+							<enumeration oor:value="StarWriter 5.0" />
+							<enumeration oor:value="Text" />
+							<enumeration oor:value="Text (encoded)" />
+						</constraints>
+						<value>writer8</value>
+						<visual apt:type="comboBox" />
+					</property>
+					<property apt:dataPath="org.openoffice.Setup/Office/Factories/com.sun.star.text.WebDocument/ooSetupFactoryDefaultFilter" apt:name="WebDocumentDefaultFilter" apt:label="SO.ls.def_filter_web" oor:type="xs:string">
+						<constraints>
+							<enumeration oor:value="HTML" />
+							<enumeration oor:value="Text (StarWriter/Web)" />
+							<enumeration oor:value="Text (encoded) (StarWriter/Web)" />
+						</constraints>
+						<value>HTML</value>
+						<visual apt:type="comboBox" />
+					</property>
+					<property apt:dataPath="org.openoffice.Setup/Office/Factories/com.sun.star.sheet.SpreadsheetDocument/ooSetupFactoryDefaultFilter" apt:name="SpreadsheetDocumentDefaultFilter" apt:label="SO.ls.def_filter_calc" oor:type="xs:string">
+						<constraints>
+							<enumeration oor:value="HTML (StarCalc)" />
+							<enumeration oor:value="MS Excel 2003 XML" />
+							<enumeration oor:value="MS Excel 5.0/95" />
+							<enumeration oor:value="MS Excel 95" />
+							<enumeration oor:value="MS Excel 97" />
+							<enumeration oor:value="calc8" />
+							<enumeration oor:value="Pocket Excel" />
+							<enumeration oor:value="StarCalc 3.0" />
+							<enumeration oor:value="StarCalc 4.0" />
+							<enumeration oor:value="StarCalc 5.0" />
+							<enumeration oor:value="StarOffice XML (Calc)" />
+							<enumeration oor:value="SYLK" />
+							<enumeration oor:value="Text - txt - csv (StarCalc)" />
+						</constraints>
+						<value>calc8</value>
+						<visual apt:type="comboBox" />
+					</property>
+					<property apt:dataPath="org.openoffice.Setup/Office/Factories/com.sun.star.presentation.PresentationDocument/ooSetupFactoryDefaultFilter" apt:name="PresentationDocumentDefaultFilter" apt:label="SO.ls.def_filter_pres" oor:type="xs:string">
+						<constraints>
+							<enumeration oor:value="MS PowerPoint 97" />
+							<enumeration oor:value="impress8_draw" />
+							<enumeration oor:value="impress8" />
+							<enumeration oor:value="StarDraw 3.0 (StarImpress)" />
+							<enumeration oor:value="StarDraw 5.0 (StarImpress)" />
+							<enumeration oor:value="StarImpress 4.0" />
+							<enumeration oor:value="StarImpress 5.0" />
+							<enumeration oor:value="impress_StarOffice_XML_Draw" />
+							<enumeration oor:value="StarOffice XML (Impress)" />
+						</constraints>
+						<value>impress8</value>
+						<visual apt:type="comboBox" />
+					</property>
+					<property apt:dataPath="org.openoffice.Setup/Office/Factories/com.sun.star.drawing.DrawingDocument/ooSetupFactoryDefaultFilter" apt:name="DrawingDocumentDefaultFilter" apt:label="SO.ls.def_filter_draw" oor:type="xs:string">
+						<constraints>
+							<enumeration oor:value="draw8" />
+							<enumeration oor:value="StarDraw 3.0" />
+							<enumeration oor:value="StarDraw 5.0" />
+							<enumeration oor:value="StarOffice XML (Draw)" />
+						</constraints>
+						<value>draw8</value>
+						<visual apt:type="comboBox" />
+					</property>
+					<property apt:dataPath="org.openoffice.Setup/Office/Factories/com.sun.star.formula.FormulaProperties/ooSetupFactoryDefaultFilter" apt:name="FormulaPropertiesDefaultFilter" apt:label="SO.ls.def_filter_math" oor:type="xs:string">
+						<constraints>
+							<enumeration oor:value="math8" />
+							<enumeration oor:value="StarMath 3.0" />
+							<enumeration oor:value="StarMath 4.0" />
+							<enumeration oor:value="StarMath 5.0" />
+							<enumeration oor:value="StarOffice XML (Math)" />
+						</constraints>
+						<value>math8</value>
+						<visual apt:type="comboBox" />
+					</property>
+				</section>
+				<xmlHandler apt:name="switchStateAutoSave">
+					<event apt:type="onChange" />
+					<action>
+						<choose>
+							<when apt:test="AutoSaveEvery.value=true">
+								<command>AutoSaveTimeInterval.enabled=true</command>
+								<command>PromptToSave.enabled=true</command>
+							</when>
+							<otherwise>
+								<command>AutoSaveTimeInterval.enabled=false</command>
+								<command>PromptToSave.enabled=false</command>
+							</otherwise>
+						</choose>
+					</action>
+				</xmlHandler>
+			</page>
+		</category>
+	</category>
+</apt:template>

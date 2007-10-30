@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+	<resImport apt:packagePath="com.sun.star8.apoc.policies.resource.staroffice_policies" />
+	<category apt:name="StarOffice8" apt:label="SO.so8" apt:inlineHelp="SO.cat_staroffice_help">
+		<category apt:name="StarOffice" apt:label="SO.so" apt:inlineHelp="SO.so.cat_staroffice_help">
+			<page apt:name="Print" apt:label="SO.so.page_print" apt:inlineHelp="SO.so.page_print_help" apt:onlineHelp="/StarOffice8/StarOffice/soPrint">
+				<section apt:name="Printer" apt:label="SO.so.sect_printer">
+					<property apt:dataPath="org.openoffice.Office.Common/Print/Option/Printer/ReduceTransparency" apt:name="PrintReduceTransparency" apt:label="SO.so.printer_trans" apt:xmlHandler="switchStateTransparencyPrint" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Print/Option/Printer/ReducedTransparencyMode" apt:name="PrintTransparencyOptions" apt:label="SO.so.printer_trans_ops" oor:type="xs:short">
+						<constraints>
+							<enumeration oor:value="0" />
+							<enumeration oor:value="1" />
+						</constraints>
+						<value>0</value>
+						<visual apt:type="radioButtons" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Print/Option/Printer/ReduceBitmaps" apt:name="PrintReduceBitmaps" apt:label="SO.so.printer_bitmaps" apt:xmlHandler="switchStateBitmapsPrint" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Print/Option/Printer/ReducedBitmapMode" apt:name="PrintReducedBitmapQuality" apt:label="SO.so.printer_bitmaps_ops" oor:type="xs:short">
+						<constraints>
+							<enumeration oor:value="0" />
+							<enumeration oor:value="1" />
+							<enumeration oor:value="2" />
+						</constraints>
+						<value>1</value>
+						<visual apt:type="radioButtons" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Print/Option/Printer/ReducedBitmapResolution" apt:name="PrintResolution" apt:label="SO.so.printer_bitmaps_res" oor:type="xs:short">
+						<constraints>
+							<enumeration oor:value="0" />
+							<enumeration oor:value="1" />
+							<enumeration oor:value="2" />
+							<enumeration oor:value="3" />
+							<enumeration oor:value="4" />
+							<enumeration oor:value="5" />
+						</constraints>
+						<value>3</value>
+						<visual apt:type="comboBox" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Print/Option/Printer/ReducedBitmapIncludesTransparency" apt:name="PrintIncludeTransparentObjects" apt:label="SO.so.printer_inc_trans" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Print/Option/Printer/ReduceGradients" apt:name="PrintReduceGradients" apt:label="SO.so.printer_grads" apt:xmlHandler="switchStateGradientsPrint" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Print/Option/Printer/ReducedGradientMode" apt:name="PrintGradientOptions" apt:label="SO.so.printer_grads_ops" oor:type="xs:short">
+						<constraints>
+							<enumeration oor:value="0" />
+							<enumeration oor:value="1" />
+						</constraints>
+						<value>0</value>
+						<visual apt:type="radioButtons" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Print/Option/Printer/ReducedGradientStepCount" apt:name="PrintMaxNumberGradientStripes" apt:label="SO.so.printer_grads_stripes" oor:type="xs:short">
+						<value>64</value>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Print/Option/Printer/ConvertToGreyscales" apt:name="PrintConvertColorsToGrayscale" apt:label="SO.so.printer_to_gray" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<section apt:name="PrintToFile" apt:label="SO.so.sect_file_print">
+					<property apt:dataPath="org.openoffice.Office.Common/Print/Option/File/ReduceTransparency" apt:name="ReduceTransparency" apt:label="SO.so.printer_trans" apt:xmlHandler="switchStateTransparency" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Print/Option/File/ReducedTransparencyMode" apt:name="TransparencyOptions" apt:label="SO.so.printer_trans_ops" oor:type="xs:short">
+						<constraints>
+							<enumeration oor:value="0" />
+							<enumeration oor:value="1" />
+						</constraints>
+						<value>0</value>
+						<visual apt:type="radioButtons" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Print/Option/File/ReduceBitmaps" apt:name="ReduceBitmaps" apt:label="SO.so.printer_bitmaps" apt:xmlHandler="switchStateBitmaps" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Print/Option/File/ReducedBitmapMode" apt:name="ReducedBitmapQuality" apt:label="SO.so.printer_bitmaps_ops" oor:type="xs:short">
+						<constraints>
+							<enumeration oor:value="0" />
+							<enumeration oor:value="1" />
+							<enumeration oor:value="2" />
+						</constraints>
+						<value>1</value>
+						<visual apt:type="radioButtons" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Print/Option/File/ReducedBitmapResolution" apt:name="Resolution" apt:label="SO.so.printer_bitmaps_res" oor:type="xs:short">
+						<constraints>
+							<enumeration oor:value="0" />
+							<enumeration oor:value="1" />
+							<enumeration oor:value="2" />
+							<enumeration oor:value="3" />
+							<enumeration oor:value="4" />
+							<enumeration oor:value="5" />
+						</constraints>
+						<value>3</value>
+						<visual apt:type="comboBox" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Print/Option/File/ReducedBitmapIncludesTransparency" apt:name="IncludeTransparentObjects" apt:label="SO.so.printer_inc_trans" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Print/Option/File/ReduceGradients" apt:name="ReduceGradients" apt:label="SO.so.printer_grads" apt:xmlHandler="switchStateGradients" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Print/Option/File/ReducedGradientMode" apt:name="GradientOptions" apt:label="SO.so.printer_grads_ops" oor:type="xs:short">
+						<constraints>
+							<enumeration oor:value="0" />
+							<enumeration oor:value="1" />
+						</constraints>
+						<value>0</value>
+						<visual apt:type="radioButtons" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Print/Option/File/ReducedGradientStepCount" apt:name="MaxNumberGradientStripes" apt:label="SO.so.printer_grads_stripes" oor:type="xs:short">
+						<value>64</value>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Print/Option/File/ConvertToGreyscales" apt:name="ConvertColorsToGrayscale" apt:label="SO.so.printer_to_gray" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<section apt:name="PrinterWarnings" apt:label="SO.so.sect_pwarns">
+					<property apt:dataPath="org.openoffice.Office.Common/Print/Warning/PaperSize" apt:name="PaperSize" apt:label="SO.so.pwarns_size" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Print/Warning/PaperOrientation" apt:name="PaperOrientation" apt:label="SO.so.pwarns_orient" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Print/Warning/Transparency" apt:name="Transparency" apt:label="SO.so.pwarns_trans" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<xmlHandler apt:name="switchStateBitmaps">
+					<event apt:type="onChange" />
+					<action>
+						<choose>
+							<when apt:test="(ReduceBitmaps.value=true)">
+								<command>ReducedBitmapQuality.enabled=true</command>
+								<command>Resolution.enabled=true</command>
+								<command>IncludeTransparentObjects.enabled=true</command>
+							</when>
+							<otherwise>
+								<command>ReducedBitmapQuality.enabled=false</command>
+								<command>Resolution.enabled=false</command>
+								<command>IncludeTransparentObjects.enabled=false</command>
+							</otherwise>
+						</choose>
+					</action>
+				</xmlHandler>
+				<xmlHandler apt:name="switchStateTransparency">
+					<event apt:type="onChange" />
+					<action>
+						<choose>
+							<when apt:test="(ReduceTransparency.value=true)">
+								<command>TransparencyOptions.enabled=true</command>
+							</when>
+							<otherwise>
+								<command>TransparencyOptions.enabled=false</command>
+							</otherwise>
+						</choose>
+					</action>
+				</xmlHandler>
+				<xmlHandler apt:name="switchStateGradients">
+					<event apt:type="onChange" />
+					<action>
+						<choose>
+							<when apt:test="(ReduceGradients.value=true)">
+								<command>GradientOptions.enabled=true</command>
+								<command>MaxNumberGradientStripes.enabled=true</command>
+							</when>
+							<otherwise>
+								<command>GradientOptions.enabled=false</command>
+								<command>MaxNumberGradientStripes.enabled=false</command>
+							</otherwise>
+						</choose>
+					</action>
+				</xmlHandler>
+				<xmlHandler apt:name="switchStateBitmapsPrint">
+					<event apt:type="onChange" />
+					<action>
+						<choose>
+							<when apt:test="(PrintReduceBitmaps.value=true)">
+								<command>PrintReducedBitmapQuality.enabled=true</command>
+								<command>PrintResolution.enabled=true</command>
+								<command>PrintIncludeTransparentObjects.enabled=true</command>
+							</when>
+							<otherwise>
+								<command>PrintReducedBitmapQuality.enabled=false</command>
+								<command>PrintResolution.enabled=false</command>
+								<command>PrintIncludeTransparentObjects.enabled=false</command>
+							</otherwise>
+						</choose>
+					</action>
+				</xmlHandler>
+				<xmlHandler apt:name="switchStateTransparencyPrint">
+					<event apt:type="onChange" />
+					<action>
+						<choose>
+							<when apt:test="(PrintReduceTransparency.value=true)">
+								<command>PrintTransparencyOptions.enabled=true</command>
+							</when>
+							<otherwise>
+								<command>PrintTransparencyOptions.enabled=false</command>
+							</otherwise>
+						</choose>
+					</action>
+				</xmlHandler>
+				<xmlHandler apt:name="switchStateGradientsPrint">
+					<event apt:type="onChange" />
+					<action>
+						<choose>
+							<when apt:test="(PrintReduceGradients.value=true)">
+								<command>PrintGradientOptions.enabled=true</command>
+								<command>PrintMaxNumberGradientStripes.enabled=true</command>
+							</when>
+							<otherwise>
+								<command>PrintGradientOptions.enabled=false</command>
+								<command>PrintMaxNumberGradientStripes.enabled=false</command>
+							</otherwise>
+						</choose>
+					</action>
+				</xmlHandler>
+			</page>
+		</category>
+	</category>
+</apt:template>

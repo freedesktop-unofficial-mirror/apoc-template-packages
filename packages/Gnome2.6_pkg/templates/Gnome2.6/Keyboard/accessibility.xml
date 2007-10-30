@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+	<resImport apt:packagePath="org.gnome26.apoc.policies.resource.gnome_policies" />
+	<category apt:name="Gnome2.6" apt:label="GNOME.gno2.6" apt:inlineHelp="GNOME.cat_gnome_help">
+		<category apt:name="Keyboard" apt:label="GNOME.keyboard" apt:inlineHelp="GNOME.cat_keyboard_help">
+			<page apt:name="Accessibility" apt:label="GNOME.accs" apt:inlineHelp="GNOME.page_accessibility_help" apt:onlineHelp="/Gnome2.6/Keyboard/accessibility">
+				<section apt:name="Basic" apt:label="GNOME.basic">
+					<!-- Setting removed due to known bug in Gnome (see 4933610 and 4961046)
+					<property apt:dataPath="org.gnome.desktop.gnome/interface/accessibility" apt:name="AccessibilitySupport" apt:resId="GNOME.apps_acc" apt:visualType="checkBox" oor:nillable="true" oor:type="xs:boolean">
+						<value>false</value>
+					</property>
+					-->
+					<property apt:dataPath="org.gnome.desktop.gnome/accessibility/keyboard/enable" apt:name="EnableAccessibility" apt:label="GNOME.acc_en" apt:xmlHandler="switchStateEnableAccessibility" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<section apt:name="BounceKeys" apt:label="GNOME.bouncekeys">
+					<property apt:dataPath="org.gnome.desktop.gnome/accessibility/keyboard/bouncekeys_enable" apt:name="EnableBouncekeys" apt:label="GNOME.bkeys_en" apt:xmlHandler="switchStateEnableBouncekeys" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.gnome.desktop.gnome/accessibility/keyboard/bouncekeys_beep_reject" apt:name="BkeysBeepRej" apt:label="GNOME.bkeys_beep_rej" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.gnome.desktop.gnome/accessibility/keyboard/bouncekeys_delay" apt:name="Bkeys_delay" apt:label="GNOME.bkeys_del" oor:type="xs:int">
+						<value>0</value>
+					</property>
+				</section>
+				<section apt:name="Features" apt:label="GNOME.features">
+					<property apt:dataPath="org.gnome.desktop.gnome/accessibility/keyboard/feature_state_change_beep" apt:name="FeatChangeBeep" apt:label="GNOME.fscb" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.gnome.desktop.gnome/accessibility/keyboard/timeout_enable" apt:name="TimeoutEnable" apt:label="GNOME.timeout_en" apt:xmlHandler="switchStateTimeoutEnable" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.gnome.desktop.gnome/accessibility/keyboard/timeout" apt:name="Timeout" apt:label="GNOME.timeout" oor:type="xs:int">
+						<value>200</value>
+					</property>
+				</section>
+				<section apt:name="MouseKeys" apt:label="GNOME.mousekeys">
+					<property apt:dataPath="org.gnome.desktop.gnome/accessibility/keyboard/mousekeys_enable" apt:name="EnableMousekeys" apt:label="GNOME.mkeys_en" apt:xmlHandler="switchStateEnableMousekeys" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.gnome.desktop.gnome/accessibility/keyboard/mousekeys_max_speed" apt:name="MkeysMaxSpeed" apt:label="GNOME.mkeys_max" oor:type="xs:int">
+						<value>10</value>
+					</property>
+					<property apt:dataPath="org.gnome.desktop.gnome/accessibility/keyboard/mousekeys_accel_time" apt:name="MkeysAccTime" apt:label="GNOME.mkeys_accel" oor:type="xs:int">
+						<value>300</value>
+					</property>
+					<property apt:dataPath="org.gnome.desktop.gnome/accessibility/keyboard/mousekeys_init_delay" apt:name="MkeysInitDelay" apt:label="GNOME.mkeys_del" oor:type="xs:int">
+						<value>300</value>
+					</property>
+				</section>
+				<section apt:name="SlowKeys" apt:label="GNOME.slowkeys">
+					<property apt:dataPath="org.gnome.desktop.gnome/accessibility/keyboard/slowkeys_enable" apt:name="EnableSlowkeys" apt:label="GNOME.skeys_en" apt:xmlHandler="switchStateEnableSlowkeys" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.gnome.desktop.gnome/accessibility/keyboard/slowkeys_delay" apt:name="Skeys_delay" apt:label="GNOME.skeys_del" oor:type="xs:int">
+						<value>0</value>
+					</property>
+					<property apt:dataPath="org.gnome.desktop.gnome/accessibility/keyboard/slowkeys_beep_accept" apt:name="SkeysBeepAcc" apt:label="GNOME.skeys_beep_acc" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.gnome.desktop.gnome/accessibility/keyboard/slowkeys_beep_reject" apt:name="SkeysBeepRej" apt:label="GNOME.skeys_beep_rej" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.gnome.desktop.gnome/accessibility/keyboard/slowkeys_beep_press" apt:name="SkeysBeepPress" apt:label="GNOME.skeys_beep_press" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<section apt:name="StickyKeys" apt:label="GNOME.stickykeys">
+					<property apt:dataPath="org.gnome.desktop.gnome/accessibility/keyboard/stickykeys_enable" apt:name="EnableStickykeys" apt:label="GNOME.stykeys_en" apt:xmlHandler="switchStateEnableStickykeys" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.gnome.desktop.gnome/accessibility/keyboard/stickykeys_modifier_beep" apt:name="StykeysModBeep" apt:label="GNOME.stykeys_mod_beep" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.gnome.desktop.gnome/accessibility/keyboard/stickykeys_two_key_off" apt:name="StykeysTwoKeyOff" apt:label="GNOME.stykeys_two_key_off" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<section apt:name="ToggleKeys" apt:label="GNOME.tglkeys">
+					<property apt:dataPath="org.gnome.desktop.gnome/accessibility/keyboard/togglekeys_enable" apt:name="EnableTglkeys" apt:label="GNOME.tglkeys_en" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<xmlHandler apt:name="switchStateEnableAccessibility">
+					<event apt:type="onChange" />
+					<action>
+						<choose>
+							<when apt:test="EnableAccessibility.value=false">
+								<command>EnableBouncekeys.enabled=false</command>
+								<command>BkeysBeepRej.enabled=false</command>
+								<command>Bkeys_delay.enabled=false</command>
+								<command>FeatChangeBeep.enabled=false</command>
+								<command>TimeoutEnable.enabled=false</command>
+								<command>Timeout.enabled=false</command>
+								<command>EnableMousekeys.enabled=false</command>
+								<command>MkeysMaxSpeed.enabled=false</command>
+								<command>MkeysAccTime.enabled=false</command>
+								<command>MkeysInitDelay.enabled=false</command>
+								<command>EnableSlowkeys.enabled=false</command>
+								<command>Skeys_delay.enabled=false</command>
+								<command>SkeysBeepAcc.enabled=false</command>
+								<command>SkeysBeepRej.enabled=false</command>
+								<command>SkeysBeepPress.enabled=false</command>
+								<command>EnableStickykeys.enabled=false</command>
+								<command>StykeysModBeep.enabled=false</command>
+								<command>StykeysTwoKeyOff.enabled=false</command>
+								<command>EnableTglkeys.enabled=false</command>
+							</when>
+							<when apt:test="EnableAccessibility.value=true">
+								<command>EnableBouncekeys.enabled=true</command>
+								<command>FeatChangeBeep.enabled=true</command>
+								<command>TimeoutEnable.enabled=true</command>
+								<command>EnableMousekeys.enabled=true</command>
+								<command>EnableSlowkeys.enabled=true</command>
+								<command>EnableStickykeys.enabled=true</command>
+								<command>EnableTglkeys.enabled=true</command>
+							</when>
+							<when apt:test="(EnableAccessibility.value=true) and (EnableBouncekeys.value=true)">
+								<command>BkeysBeepRej.enabled=true</command>
+								<command>Bkeys_delay.enabled=true</command>
+							</when>
+							<when apt:test="(EnableAccessibility.value=true) and (EnableMousekeys.value=true)">
+								<command>MkeysMaxSpeed.enabled=true</command>
+								<command>MkeysAccTime.enabled=true</command>
+								<command>MkeysInitDelay.enabled=true</command>
+							</when>
+							<when apt:test="(EnableAccessibility.value=true) and (EnableSlowkeys.value=true)">
+								<command>Skeys_delay.enabled=true</command>
+								<command>SkeysBeepAcc.enabled=true</command>
+								<command>SkeysBeepRej.enabled=true</command>
+								<command>SkeysBeepPress.enabled=true</command>
+							</when>
+							<when apt:test="(EnableAccessibility.value=true) and (EnableStickykeys.value=true)">
+								<command>StykeysModBeep.enabled=true</command>
+								<command>StykeysTwoKeyOff.enabled=true</command>
+							</when>
+							<otherwise>
+								<command>EnableBouncekeys.enabled=false</command>
+								<command>BkeysBeepRej.enabled=false</command>
+								<command>Bkeys_delay.enabled=false</command>
+								<command>FeatChangeBeep.enabled=false</command>
+								<command>TimeoutEnable.enabled=false</command>
+								<command>Timeout.enabled=false</command>
+								<command>EnableMousekeys.enabled=false</command>
+								<command>MkeysMaxSpeed.enabled=false</command>
+								<command>MkeysAccTime.enabled=false</command>
+								<command>MkeysInitDelay.enabled=false</command>
+								<command>EnableSlowkeys.enabled=false</command>
+								<command>Skeys_delay.enabled=false</command>
+								<command>SkeysBeepAcc.enabled=false</command>
+								<command>SkeysBeepRej.enabled=false</command>
+								<command>SkeysBeepPress.enabled=false</command>
+								<command>EnableStickykeys.enabled=false</command>
+								<command>StykeysModBeep.enabled=false</command>
+								<command>StykeysTwoKeyOff.enabled=false</command>
+								<command>EnableTglkeys.enabled=false</command>
+							</otherwise>
+                                                </choose>
+					</action>
+				</xmlHandler>
+				<xmlHandler apt:name="switchStateTimeoutEnable">
+					<event apt:type="onChange" />
+					<action>
+						<choose>
+							<when apt:test="TimeoutEnable.value=true">
+								<command>Timeout.enabled=true</command>
+							</when>
+       							<otherwise>
+								<command>Timeout.enabled=false</command>
+							</otherwise>
+						</choose>
+					</action>
+				</xmlHandler>
+				<xmlHandler apt:name="switchStateEnableBouncekeys">
+					<event apt:type="onChange" />
+					<action>
+						<choose>
+							<when apt:test="EnableBouncekeys.value=true">
+								<command>BkeysBeepRej.enabled=true</command>
+								<command>Bkeys_delay.enabled=true</command>
+							</when>
+							<otherwise>
+								<command>BkeysBeepRej.enabled=false</command>
+								<command>Bkeys_delay.enabled=false</command>
+							</otherwise>
+						</choose>
+					</action>
+				</xmlHandler>
+				<xmlHandler apt:name="switchStateEnableMousekeys">
+					<event apt:type="onChange" />
+					<action>
+						<choose>
+							<when apt:test="EnableMousekeys.value=true">
+								<command>MkeysMaxSpeed.enabled=true</command>
+								<command>MkeysAccTime.enabled=true</command>
+								<command>MkeysInitDelay.enabled=true</command>
+							</when>
+							<otherwise>
+								<command>MkeysMaxSpeed.enabled=false</command>
+								<command>MkeysAccTime.enabled=false</command>
+								<command>MkeysInitDelay.enabled=false</command>
+							</otherwise>
+						</choose>
+					</action>
+				</xmlHandler>
+				<xmlHandler apt:name="switchStateEnableSlowkeys">
+					<event apt:type="onChange" />
+					<action>
+						<choose>
+							<when apt:test="EnableSlowkeys.value=true">
+								<command>Skeys_delay.enabled=true</command>
+								<command>SkeysBeepAcc.enabled=true</command>
+								<command>SkeysBeepRej.enabled=true</command>
+								<command>SkeysBeepPress.enabled=true</command>
+							</when>
+							<otherwise>
+								<command>Skeys_delay.enabled=false</command>
+								<command>SkeysBeepAcc.enabled=false</command>
+								<command>SkeysBeepRej.enabled=false</command>
+								<command>SkeysBeepPress.enabled=false</command>
+							</otherwise>
+						</choose>
+					</action>
+				</xmlHandler>
+				<xmlHandler apt:name="switchStateEnableStickykeys">
+					<event apt:type="onChange" />
+					<action>
+						<choose>
+							<when apt:test="EnableStickykeys.value=true">
+								<command>StykeysModBeep.enabled=true</command>
+								<command>StykeysTwoKeyOff.enabled=true</command>
+							</when>
+							<otherwise>
+								<command>StykeysModBeep.enabled=false</command>
+								<command>StykeysTwoKeyOff.enabled=false</command>
+							</otherwise>
+						</choose>
+					</action>
+				</xmlHandler>
+			</page>
+		</category>
+	</category>
+</apt:template>

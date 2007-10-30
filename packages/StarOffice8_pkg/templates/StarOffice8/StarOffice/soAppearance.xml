@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+	<resImport apt:packagePath="com.sun.star8.apoc.policies.resource.staroffice_policies" />
+	<category apt:name="StarOffice8" apt:label="SO.so8" apt:inlineHelp="SO.cat_staroffice_help">
+		<category apt:name="StarOffice" apt:label="SO.so" apt:inlineHelp="SO.so.cat_staroffice_help">
+			<page apt:name="Appearance" apt:label="SO.so.page_appearance" apt:inlineHelp="SO.so.page_appearance_help" apt:onlineHelp="/StarOffice8/StarOffice/soAppearance">
+				<section apt:name="General" apt:label="SO.so.sect_general">
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/DocColor/Color" apt:name="DocumentBackground" apt:label="SO.so.gen_doc_bg" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/DocBoundaries/IsVisible" apt:name="TextBoundariesOn" apt:label="SO.so.gen_text_bounds_on" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/DocBoundaries/Color" apt:name="TextBoundries" apt:label="SO.so.gen_text_bounds" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/AppBackground/Color" apt:name="ApplicationBackground" apt:label="SO.so.gen_app_bg" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/ObjectBoundaries/IsVisible" apt:name="ObjectBoundariesOn" apt:label="SO.so.gen_obj_bg_on" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/ObjectBoundaries/Color" apt:name="ObjectBoundaries" apt:label="SO.so.gen_obj_bg" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/TableBoundaries/IsVisible" apt:name="TableBoundariesOn" apt:label="SO.so.gen_table_bounds_on" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/TableBoundaries/Color" apt:name="TableBoundaries" apt:label="SO.so.gen_table_bounds" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/FontColor/Color" apt:name="FontColor" apt:label="SO.so.gen_font" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/Links/IsVisible" apt:name="UnvisitedLinksOn" apt:label="SO.so.gen_unvisited_on" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/Links/Color" apt:name="UnvisitedLinks" apt:label="SO.so.gen_unvisited" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/LinksVisited/IsVisible" apt:name="VisitedLinksIsVisible" apt:label="SO.so.gen_visited_on" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/LinksVisited/Color" apt:name="VisitedLinksColor" apt:label="SO.so.gen_visited" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/Spell/Color" apt:name="AutoSpellcheck" apt:label="SO.so.gen_autospell" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+				</section>
+				<section apt:name="TextDocument" apt:label="SO.so.sect_text_doc">
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/WriterTextGrid/Color" apt:name="GridWriter" apt:label="SO.so.doc_grid" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/WriterFieldShadings/IsVisible" apt:name="FieldShadingOn" apt:label="SO.so.doc_field_on" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/WriterFieldShadings/Color" apt:name="FieldShading" apt:label="SO.so.doc_field" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/WriterIdxShadings/IsVisible" apt:name="IndexTableShadingOn" apt:label="SO.so.doc_index_on" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/WriterIdxShadings/Color" apt:name="IndexTableShading" apt:label="SO.so.doc_index" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/WriterNotesIndicator/Color" apt:name="NoteIndicator" apt:label="SO.so.doc_notes" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/WriterScriptIndicator/Color" apt:name="ScriptIndicator" apt:label="SO.so.doc_scripts" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/WriterSectionBoundaries/IsVisible" apt:name="SectionBoundariesOn" apt:label="SO.so.doc_sects_on" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/WriterSectionBoundaries/Color" apt:name="SectionBoundaries" apt:label="SO.so.doc_sects" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/WriterPageBreaks/Color" apt:name="PageColumnBreaks" apt:label="SO.so.doc_breaks" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/WriterDirectCursor/Color" apt:name="DirectCursor" apt:label="SO.so.doc_cursor" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+				</section>
+				<section apt:name="HTMLDocument" apt:label="SO.so.sect_html_doc">
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/HTMLSGML/Color" apt:name="SGMLHighlighting" apt:label="SO.so.html_sgml" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/HTMLComment/Color" apt:name="CommentHighlighting" apt:label="SO.so.html_comment" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/HTMLKeyword/Color" apt:name="KeywordHighlighting" apt:label="SO.so.html_keyword" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/HTMLUnknown/Color" apt:name="TextHighlighting" apt:label="SO.so.html_text" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+				</section>
+				<section apt:name="Spreadsheet" apt:label="SO.so.sect_ss">
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/CalcGrid/Color" apt:name="GridLines" apt:label="SO.so.ss_grid" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/CalcPageBreak/Color" apt:name="PageBreaks" apt:label="SO.so.ss_page" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/CalcPageBreakManual/Color" apt:name="ManualPageBreaks" apt:label="SO.so.ss_manual" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/CalcPageBreakAutomatic/Color" apt:name="AutomaticPageBreaks" apt:label="SO.so.ss_auto" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/CalcDetective/Color" apt:name="Detective" apt:label="SO.so.ss_detect" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/CalcDetectiveError/Color" apt:name="DetectiveErrors" apt:label="SO.so.ss_detect_errs" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/CalcReference/Color" apt:name="References" apt:label="SO.so.ss_refs" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/CalcNotesBackground/Color" apt:name="NotesBackground" apt:label="SO.so.ss_notes" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+				</section>
+				<section apt:name="DrawingPresentation" apt:label="SO.so.sect_draw">
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/DrawGrid/Color" apt:name="GridDraw" apt:label="SO.so.draw_grid" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+				</section>
+				<section apt:name="BasicSyntaxHighlighting" apt:label="SO.so.sect_basic">
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/BASICIdentifier/Color" apt:name="Identifier" apt:label="SO.so.basic_id" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/BASICComment/Color" apt:name="Comment" apt:label="SO.so.basic_comment" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/BASICNumber/Color" apt:name="Number" apt:label="SO.so.basic_num" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/BASICString/Color" apt:name="String" apt:label="SO.so.basic_string" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/BASICOperator/Color" apt:name="Operator" apt:label="SO.so.basic_op" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/BASICKeyword/Color" apt:name="ReservedExpression" apt:label="SO.so.basic_reserved" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.UI/ColorScheme/ColorSchemes/StarOffice/BASICError/Color" apt:name="Error" apt:label="SO.so.basic_error" oor:type="xs:int" apt:inlineHelp="SO.color_chooser_help">
+						<value xsi:nil="true" />
+						<visual apt:type="colorSelector" />
+					</property>
+				</section>
+			</page>
+		</category>
+	</category>
+</apt:template>

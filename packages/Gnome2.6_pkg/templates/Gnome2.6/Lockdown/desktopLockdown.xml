@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+	<resImport apt:packagePath="org.gnome26.apoc.policies.resource.gnome_policies" />
+	<category apt:name="Gnome2.6" apt:label="GNOME.gno2.6" apt:inlineHelp="GNOME.cat_gnome_help">
+		<page apt:name="Lockdown" apt:label="GNOME.lockdown" apt:inlineHelp="GNOME.page_desktop_lock_help" apt:onlineHelp="/Gnome2.6/Lockdown/desktopLockdown">
+			<section apt:name="LockdownOptions" apt:label="GNOME.lockdown_ops">
+				<property apt:dataPath="org.gnome.apps.panel/global/locked_down" apt:name="LockdownPanelConfiguration" apt:label="GNOME.lock_panel_config" oor:type="xs:boolean" apt:inlineHelp="GNOME.lockdown_panel_config_help">
+					<value>false</value>
+					<visual>
+						<checkBox />
+					</visual>
+				</property>
+				<property apt:dataPath="org.gnome.desktop.gnome/lockdown/disable_command_line" apt:name="DisableCommandLine" apt:label="GNOME.lock_terminal" oor:type="xs:boolean" apt:inlineHelp="GNOME.disable_command_line_help">
+					<value>false</value>
+					<visual>
+						<checkBox />
+					</visual>
+				</property>
+				<property apt:dataPath="org.gnome.apps.panel/global/disable_lock_screen" apt:name="DisableLockScreen" apt:label="GNOME.lock" oor:type="xs:boolean" apt:inlineHelp="GNOME.disable_lockscreen_help">
+					<value>false</value>
+					<visual>
+						<checkBox />
+					</visual>
+				</property>
+				<property apt:dataPath="org.gnome.apps.panel/global/disable_log_out" apt:name="DisableLogout" apt:label="GNOME.logout" oor:type="xs:boolean" apt:inlineHelp="GNOME.disable_logout_help">
+					<value>false</value>
+					<visual>
+						<checkBox />
+					</visual>
+				</property>
+				<property apt:dataPath="org.gnome.desktop.gnome/lockdown/restrict_application_launching" apt:name="RestrictApplicationLaunching" apt:xmlHandler="switchStateRestrictedApps" apt:label="GNOME.lock_app_launch" oor:type="xs:boolean" apt:inlineHelp="GNOME.restrict_application_launching_help">
+					<value>false</value>
+					<visual>
+						<checkBox />
+					</visual>
+				</property>
+				<property apt:dataPath="org.gnome.desktop.gnome/lockdown/allowed_applications" apt:name="AllowedApplications" apt:label="GNOME.allowed_apps" oor:type="oor:string-list" apt:inlineHelp="GNOME.allowed_applications_help">
+					<value oor:separator=";">/usr/bin/gnome-terminal;/usr/bin/soffice;/usr/bin/staroffice;/usr/bin/evolution-1.4;/usr/bin/file-roller;/usr/bin/gcalctool;/usr/bin/gucharmap;/usr/bin/gedit;/usr/bin/eog;/usr/bin/ggv;/usr/bin/gaim;/usr/bin/gnome-cd;/usr/bin/gnome-sound-recorder;/usr/bin/gnome-volume-control;/usr/bin/glade-2;/usr/bin/gconf-editor;/usr/bin/gdmsetup;/usr/bin/gdmflexiserver;/usr/bin/gnome-search-tool;/usr/bin/cddb-slave2-properties;/usr/bin/gnome-file-types-properties;/usr/bin/gnome-panel-preferences;/usr/bin/gnome-default-applications-properties;/usr/bin/gnome-session-properties;/usr/bin/gnome-background-properties;/usr/bin/gnome-font-properties;/usr/bin/gnome-ui-properties;/usr/bin/gnome-display-properties;/usr/bin/nautilus;/usr/bin/gnome-sound-properties;/usr/bin/gnome-mouse-properties;/usr/bin/gnome-network-preferences;/usr/bin/nautilus-file-management-properties;/usr/bin/gnome-keybinding-properties;/usr/bin/gnome-keyboard-layout;/usr/bin/gnome-keyboard-properties;/usr/bin/gnome-theme-manager;/usr/bin/gnome-window-properties;/usr/bin/gnome-accessibility-keyboard-properties;/usr/bin/yelp;/usr/bin/jds-help;/usr/bin/jmplay;/usr/sfw/bin/gataxx;/usr/sfw/bin/gimp-remote-2.0;/usr/sfw/bin/glines;/usr/sfw/bin/gnect;/usr/sfw/bin/gnibbles;/usr/sfw/bin/gnobots2;/usr/sfw/bin/gnome-stones;/usr/sfw/bin/gnomine;/usr/sfw/bin/gnotravex;/usr/sfw/bin/gnotski;/usr/sfw/bin/gtali;/usr/sfw/bin/gthumb;/usr/sfw/bin/gtkam;/usr/sfw/bin/iagno;/usr/sfw/bin/mahjongg;/usr/sfw/bin/mozilla;/usr/sfw/bin/planner;/usr/sfw/bin/same-gnome;/usr/sfw/bin/totem;/usr/jre/bin/ControlPanel;/usr/openwin/bin/xscreensaver-demo;/usr/demo/jds/bin/jedit;/usr/demo/jds/bin/jdictionary;/usr/demo/jds/bin/jdiskreport;/usr/demo/jds/bin/jgraphpad;</value>
+					<visual apt:type="stringList" />
+				</property>
+				<property apt:dataPath="org.gnome.apps.panel/global/disable_force_quit" apt:name="DisableForceQuit" apt:label="GNOME.disable_force_quit" oor:type="xs:boolean" apt:inlineHelp="GNOME.disable_force_quit_help">
+					<value>false</value>
+					<visual>
+						<checkBox />
+					</visual>
+				</property>
+				<property apt:dataPath="org.gnome.apps.panel/global/disabled_applets" apt:name="DisabledApplets" apt:label="GNOME.disabled_applets" oor:type="oor:string-list" apt:inlineHelp="GNOME.disabled_applets_help">
+					<value />
+					<visual apt:type="stringList" />
+				</property>
+			</section>
+			<xmlHandler apt:name="switchStateRestrictedApps">
+				<event apt:type="onChange" />
+				<action>
+					<choose>
+						<when apt:test="RestrictApplicationLaunching.value=true">
+							<command>AllowedApplications.enabled=true</command>
+						</when>
+						<otherwise>
+							<command>AllowedApplications.enabled=false</command>
+						</otherwise>
+					</choose>
+				</action>
+			</xmlHandler>
+		</page>
+	</category>
+</apt:template>

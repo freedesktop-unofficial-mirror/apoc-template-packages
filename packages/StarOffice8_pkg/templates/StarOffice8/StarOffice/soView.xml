@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+	<resImport apt:packagePath="com.sun.star8.apoc.policies.resource.staroffice_policies" />
+	<category apt:name="StarOffice8" apt:label="SO.so8" apt:inlineHelp="SO.cat_staroffice_help">
+		<category apt:name="StarOffice" apt:label="SO.so" apt:inlineHelp="SO.so.cat_staroffice_help">
+			<page apt:name="View" apt:label="SO.so.page_view" apt:inlineHelp="SO.so.page_view_help" apt:onlineHelp="/StarOffice8/StarOffice/soView">
+				<section apt:name="Display" apt:label="SO.so.sect_display">
+					<property apt:dataPath="org.openoffice.Office.Common/View/FontScaling" apt:name="Scale" apt:label="SO.so.display_scale" oor:type="xs:short">
+						<value>100</value>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Misc/SymbolSet" apt:name="IconSize" apt:label="SO.so.display_icon" oor:type="xs:short">
+						<constraints>
+							<enumeration oor:value="0" />
+							<enumeration oor:value="1" />
+						</constraints>
+						<value>0</value>
+						<visual apt:type="comboBox" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Accessibility/IsSystemFont" apt:name="UseSysFontForUI" apt:label="SO.so.misc_sys_font" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/View/FontAntiAliasing/Enabled" apt:name="FontAntialiasing" apt:label="SO.so.display_antia" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/View/FontAntiAliasing/MinPixelHeight" apt:name="AntialiasingFrom" apt:label="SO.so.display_antia_at" oor:type="xs:short">
+						<value>8</value>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Font/View/ShowFontBoxWYSIWYG" apt:name="PreviewInFontsList" apt:label="SO.so.display_preview" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/View/Menu/DontHideDisabledEntry" apt:name="InactiveMenuItems" apt:label="SO.so.display_inactive" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Font/View/History" apt:name="FontHistory" apt:label="SO.so.display_font" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/View/Menu/ShowIconsInMenues" apt:name="ShowIconsInMenus" apt:label="SO.so.display_show" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<section apt:name="Restore" apt:label="SO.so.sect_restore">
+					<property apt:dataPath="org.openoffice.Office.Common/Save/Document/ViewInfo" apt:name="EditingView" apt:label="SO.so.restore_editing" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Save/Document/DocumentWindows" apt:name="OpenWindows" apt:label="SO.so.restore_open" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<section apt:name="View3D" apt:label="SO.so.sect_3d">
+					<property apt:dataPath="org.openoffice.Office.Common/_3D_Engine/OpenGL" apt:name="UseOpenGL" apt:label="SO.so.3d_openGL" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/_3D_Engine/OpenGL_Faster" apt:name="OptimizedOutput" apt:label="SO.so.3d_optimized" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/_3D_Engine/Dithering" apt:name="UseDithering" apt:label="SO.so.3d_dithering" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/_3D_Engine/ShowFull" apt:name="ObjectRefreshDuringInteraction" apt:label="SO.so.3d_refresh" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<section apt:name="Mouse" apt:label="SO.so.sect_mouse">
+					<property apt:dataPath="org.openoffice.Office.Common/View/Dialog/MousePositioning" apt:name="MousePositioning" apt:label="SO.so.mouse_positioning" oor:type="xs:short">
+						<constraints>
+							<enumeration oor:value="0" />
+							<enumeration oor:value="1" />
+							<enumeration oor:value="2" />
+						</constraints>
+						<value>2</value>
+						<visual apt:type="comboBox" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/View/Dialog/MiddleMouseButton" apt:name="MiddleMouseButton" apt:label="SO.so.mouse_middle" oor:type="xs:short">
+						<constraints>
+							<enumeration oor:value="0" />
+							<enumeration oor:value="1" />
+							<enumeration oor:value="2" />
+						</constraints>
+						<value>2</value>
+						<visual apt:type="comboBox" />
+					</property>
+				</section>
+			</page>
+		</category>
+	</category>
+</apt:template>

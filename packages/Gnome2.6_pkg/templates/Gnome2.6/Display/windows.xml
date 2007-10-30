@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+	<resImport apt:packagePath="org.gnome26.apoc.policies.resource.gnome_policies" />
+	<category apt:name="Gnome2.6" apt:label="GNOME.gno2.6" apt:inlineHelp="GNOME.cat_gnome_help">
+		<category apt:name="Display" apt:label="GNOME.display" apt:inlineHelp="GNOME.cat_display_help">
+			<page apt:name="Windows" apt:label="GNOME.windows" apt:inlineHelp="GNOME.page_windows_help" apt:onlineHelp="/Gnome2.6/Display/windows">
+				<section apt:name="FocusPrefs" apt:label="GNOME.focus_prefs">
+					<property apt:dataPath="org.gnome.apps.metacity/general/focus_mode" apt:name="FocusMode" apt:label="GNOME.focus_mode" apt:xmlHandler="switchStateFocusMode" oor:type="xs:string" apt:inlineHelp="GNOME.focus_mode_help">
+						<constraints>
+							<enumeration oor:value="click" />
+							<enumeration oor:value="mouse" />
+							<enumeration oor:value="sloppy" />
+						</constraints>
+						<value>click</value>
+						<visual apt:type="comboBox" />
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/general/auto_raise" apt:name="AutoRaise" apt:label="GNOME.a_raise" apt:xmlHandler="switchStateAutoRaise" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/general/auto_raise_delay" apt:name="AutoRaiseDelay" apt:label="GNOME.a_raise_delay" oor:type="xs:int">
+						<value>500</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/general/button_layout" apt:name="ButtonLayout" apt:label="GNOME.btn_layout" oor:type="xs:string" apt:inlineHelp="GNOME.button_layout_help">
+						<value>menu:minimize,maximize,close</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/general/action_double_click_titlebar" apt:name="DoubleClickBar" apt:label="GNOME.dble_click_tbar" oor:type="xs:string">
+						<constraints>
+							<enumeration oor:value="toggle_shade" />
+							<enumeration oor:value="toggle_maximize" />
+						</constraints>
+						<value>toggle_maximize</value>
+						<visual apt:type="radioButtons" />
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/general/mouse_button_modifier" apt:name="MouseBtnMod" apt:label="GNOME.mouse_btn_mod" oor:type="xs:string" apt:inlineHelp="GNOME.mouse_button_modifier_help">
+						<value>&lt;Alt&gt;</value>
+					</property>
+				</section>
+				<section apt:name="WorkSpacePrefs" apt:label="GNOME.ws_prefs">
+					<property apt:dataPath="org.gnome.apps.metacity/general/num_workspaces" apt:name="NumWorkspaces" apt:label="GNOME.no_of_ws" oor:type="xs:int">
+						<value>4</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/workspace_names/name_1" apt:name="NameWorkspace1" apt:label="GNOME.ws_name1" oor:type="xs:string" />
+					<property apt:dataPath="org.gnome.apps.metacity/workspace_names/name_2" apt:name="NameWorkspace2" apt:label="GNOME.ws_name2" oor:type="xs:string" />
+					<property apt:dataPath="org.gnome.apps.metacity/workspace_names/name_3" apt:name="NameWorkspace3" apt:label="GNOME.ws_name3" oor:type="xs:string" />
+					<property apt:dataPath="org.gnome.apps.metacity/workspace_names/name_4" apt:name="NameWorkspace4" apt:label="GNOME.ws_name4" oor:type="xs:string" />
+					<property apt:dataPath="org.gnome.apps.metacity/workspace_names/name_5" apt:name="NameWorkspace5" apt:label="GNOME.ws_name5" oor:type="xs:string" />
+					<property apt:dataPath="org.gnome.apps.metacity/workspace_names/name_6" apt:name="NameWorkspace6" apt:label="GNOME.ws_name6" oor:type="xs:string" />
+				</section>
+				<xmlHandler apt:name="switchStateFocusMode">
+					<event apt:type="onChange" />
+					<action>
+						<choose>
+							<when apt:test="((FocusMode.value=sloppy) or (FocusMode.value=mouse))">
+								<command>AutoRaise.enabled=true</command>
+							</when>
+							<when apt:test="((FocusMode.value=sloppy) or (FocusMode.value=mouse) and (AutoRaise.value=true))">
+								<command>AutoRaiseDelay.enabled=true</command>
+							</when>
+							<otherwise>
+								<command>AutoRaise.enabled=false</command>
+								<command>AutoRaiseDelay.enabled=false</command>
+							</otherwise>
+      						</choose>
+					</action>
+				</xmlHandler>
+				<xmlHandler apt:name="switchStateAutoRaise">
+					<event apt:type="onChange" />
+					<action>
+						<choose>
+							<when apt:test="AutoRaise.value=true">
+								<command>AutoRaiseDelay.enabled=true</command>
+							</when>
+							<otherwise>
+								<command>AutoRaiseDelay.enabled=false</command>
+							</otherwise>
+						</choose>
+					</action>
+				</xmlHandler>
+			</page>
+		</category>
+	</category>
+</apt:template>

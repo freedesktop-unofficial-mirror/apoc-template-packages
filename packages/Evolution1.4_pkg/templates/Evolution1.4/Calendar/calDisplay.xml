@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template apt:name="calDisplay">
+	<resImport apt:packagePath="org.gnome.evolution.apoc.policies.resource.evolution_policies"/>
+	<category apt:name="Evolution1.4" apt:resId="EVO.evo1.4">
+		<inlineHelp apt:resId="EVO.cat_evolution_help"/>
+		<category apt:name="Calendar" apt:resId="EVO.calendar">
+			<inlineHelp apt:resId="EVO.cat_calendar_help"/>
+			<page apt:name="Display" apt:resId="EVO.cal.display">
+				<inlineHelp apt:resId="EVO.cal.display_help"/>
+				<section apt:name="General" apt:resId="EVO.cal.general">
+					<property apt:dataPath="org.gnome.apps.evolution/calendar/display/use_24hour_format" apt:name="24HourFormat" apt:resId="EVO.cal.24hour" apt:visualType="checkBox" oor:nillable="true" oor:type="xs:boolean">
+						<value>true</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.evolution/calendar/date_navigator/show_week_numbers" apt:name="ShowWeekNums" apt:resId="EVO.cal.week_nos" apt:visualType="checkBox" oor:nillable="true" oor:type="xs:boolean">
+						<value>false</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.evolution/calendar/display/time_divisions" apt:name="TimeDivisions" apt:resId="EVO.cal.time_div" apt:visualType="comboBox" oor:nillable="true" oor:type="xs:int">
+						<constraints>
+							<enumeration oor:value="5"/>
+							<enumeration oor:value="10"/>
+							<enumeration oor:value="15"/>
+							<enumeration oor:value="30"/>
+							<enumeration oor:value="60"/>
+						</constraints>
+						<value>30</value>
+					</property>
+				</section>
+				<section apt:name="WorkingHours" apt:resId="EVO.cal.work_hours">
+					<property apt:dataPath="org.gnome.apps.evolution/calendar/display/day_start_hour" apt:name="StartHour" apt:resId="EVO.cal.hour_start" oor:nillable="true" oor:type="xs:int">
+						<value>9</value>
+						<inlineHelp apt:resId="EVO.cal.hour_start_help"/>
+					</property>
+					<property apt:dataPath="org.gnome.apps.evolution/calendar/display/day_start_minute" apt:name="StartMin" apt:resId="EVO.cal.min_start" oor:nillable="true" oor:type="xs:int">
+						<value>0</value>
+						<inlineHelp apt:resId="EVO.cal.min_start_help"/>
+					</property>
+					<property apt:dataPath="org.gnome.apps.evolution/calendar/display/day_end_hour" apt:name="EndHour" apt:resId="EVO.cal.hour_end" oor:nillable="true" oor:type="xs:int">
+						<value>17</value>
+						<inlineHelp apt:resId="EVO.cal.hour_end_help"/>
+					</property>
+					<property apt:dataPath="org.gnome.apps.evolution/calendar/display/day_end_minute" apt:name="EndMin" apt:resId="EVO.cal.min_end" oor:nillable="true" oor:type="xs:int">
+						<value>0</value>
+						<inlineHelp apt:resId="EVO.cal.min_end_help"/>
+					</property>
+					<property apt:dataPath="org.gnome.apps.evolution/calendar/display/week_start_day" apt:name="StartDay" apt:resId="EVO.cal.day_start" apt:visualType="comboBox" oor:nillable="true" oor:type="xs:int">
+						<constraints>
+							<enumeration oor:value="1"/>
+							<enumeration oor:value="2"/>
+							<enumeration oor:value="3"/>
+							<enumeration oor:value="4"/>
+							<enumeration oor:value="5"/>
+							<enumeration oor:value="6"/>
+							<enumeration oor:value="0"/>
+						</constraints>
+						<value>1</value>
+					</property>
+				</section>
+			</page>
+		</category>
+	</category>
+</apt:template>

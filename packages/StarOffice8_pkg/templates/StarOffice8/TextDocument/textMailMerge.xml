@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+	<resImport apt:packagePath="com.sun.star8.apoc.policies.resource.staroffice_policies" />
+	<category apt:name="StarOffice8" apt:label="SO.so8" apt:inlineHelp="SO.cat_staroffice_help">
+		<category apt:name="TextDocument" apt:label="SO.textDocument" apt:inlineHelp="SO.textDocument_help">
+			<page apt:name="MailMerge" apt:label="SO.text.mail_merge" apt:inlineHelp="SO.text.mail_merge_help" apt:onlineHelp="/StarOffice8/TextDocument/textMailMerge">
+				<section apt:name="UserInformation" apt:label="SO.text.user_info">
+					<property apt:dataPath="org.openoffice.Office.Writer/MailMergeWizard/MailDisplayName" apt:name="MailDisplayName" apt:label="SO.text.mail_displayname" oor:type="xs:string">
+						<value></value>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/MailMergeWizard/MailAddress" apt:name="MailAddress" apt:label="SO.text.mail_address" oor:type="xs:string">
+						<value></value>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/MailMergeWizard/IsMailReplyTo" apt:name="IsMailReplyTo" apt:label="SO.text.mail_is_replyto" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/MailMergeWizard/MailReplyTo" apt:name="MailReplyTo" apt:label="SO.text.mail_replyto" oor:type="xs:string">
+						<value></value>
+					</property>
+                </section>
+				<section apt:name="OutgoingServerSettings" apt:label="SO.text.out_server">
+					<property apt:dataPath="org.openoffice.Office.Writer/MailMergeWizard/MailServer" apt:name="MailServer" apt:label="SO.text.mail_server" oor:type="xs:string">
+						<value></value>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/MailMergeWizard/MailPort" apt:name="MailPort" apt:label="SO.text.mail_port" oor:type="xs:int">
+						<value>25</value>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/MailMergeWizard/IsSecureConnection" apt:name="IsSecureConnection" apt:label="SO.text.mail_is_ssl" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+                </section>
+				<section apt:name="ServerAuthentication" apt:label="SO.text.server_auth">
+					<property apt:dataPath="org.openoffice.Office.Writer/MailMergeWizard/IsAuthentication" apt:name="IsAuthentication" apt:label="SO.text.mail_is_auth" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/MailMergeWizard/IsSMPTAfterPOP" apt:name="IsSMPTAfterPOP" apt:label="SO.text.mail_is_smpt" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/MailMergeWizard/MailUserName" apt:name="MailUserName" apt:label="SO.text.mail_username" oor:type="xs:string">
+						<value></value>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/MailMergeWizard/MailPassword" apt:name="MailPassword" apt:label="SO.text.mail_pw" oor:type="xs:string">
+						<value></value>
+                        <visual apt:type="password" />
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/MailMergeWizard/InServerName" apt:name="InServerName" apt:label="SO.text.mail_in_server" oor:type="xs:string">
+						<value></value>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/MailMergeWizard/InServerPort" apt:name="InServerPort" apt:label="SO.text.mail_in_port" oor:type="xs:int">
+						<value>110</value>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/MailMergeWizard/InServerIsPOP" apt:name="InServerIsPOP" apt:label="SO.text.mail_in_is_pop" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/MailMergeWizard/InServerUserName" apt:name="InServerUserName" apt:label="SO.text.mail_in_username" oor:type="xs:string">
+						<value></value>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/MailMergeWizard/InServerPassword" apt:name="InServerPassword" apt:label="SO.text.mail_in_pw" oor:type="xs:string">
+						<value></value>
+                        <visual apt:type="password" />
+					</property>
+                </section>
+			</page>
+		</category>
+	</category>
+</apt:template>

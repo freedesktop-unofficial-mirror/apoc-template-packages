@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+	<resImport apt:packagePath="com.sun.star8.apoc.policies.resource.staroffice_policies" />
+	<category apt:name="StarOffice8" apt:label="SO.so8" apt:inlineHelp="SO.cat_staroffice_help">
+		<category apt:name="TextDocument" apt:label="SO.textDocument" apt:inlineHelp="SO.textDocument_help">
+			<page apt:name="AsianFonts" apt:label="SO.text.asian_fonts" apt:inlineHelp="SO.text.asian_fonts_help" apt:onlineHelp="/StarOffice8/TextDocument/textFonts">
+				<section apt:name="BasicFonts" apt:label="SO.text.fonts_basic">
+					<property apt:dataPath="org.openoffice.Office.Writer/DefaultFontCJK/Standard" apt:name="Default" apt:label="SO.text.fonts_def" oor:type="xs:string" apt:inlineHelp="SO.text.fonts_def_help">
+						<value>Andale Sans UI</value>
+						<visual>
+							<chooser apt:extendsChooser="/StarOffice8/TextDocument/Fonts/BasicFonts/Default" />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/DefaultFontCJK/Heading" apt:name="Headings" apt:label="SO.text.fonts_head" oor:type="xs:string" apt:inlineHelp="SO.text.fonts_head_help">
+						<value>Mincho</value>
+						<visual>
+							<chooser apt:extendsChooser="/StarOffice8/TextDocument/Fonts/BasicFonts/Default" />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/DefaultFontCJK/List" apt:name="Lists" apt:label="SO.text.fonts_list" oor:type="xs:string" apt:inlineHelp="SO.text.fonts_list_help">
+						<value>Andale Sans UI</value>
+						<visual>
+							<chooser apt:extendsChooser="/StarOffice8/TextDocument/Fonts/BasicFonts/Default" />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/DefaultFontCJK/Caption" apt:name="Captions" apt:label="SO.text.fonts_caption" oor:type="xs:string" apt:inlineHelp="SO.text.fonts_caption_help">
+						<value>Andale Sans UI</value>
+						<visual>
+							<chooser apt:extendsChooser="/StarOffice8/TextDocument/Fonts/BasicFonts/Default" />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Writer/DefaultFontCJK/Index" apt:name="Index" apt:label="SO.text.fonts_index" oor:type="xs:string" apt:inlineHelp="SO.text.fonts_index_help">
+						<value>Andale Sans UI</value>
+						<visual>
+							<chooser apt:extendsChooser="/StarOffice8/TextDocument/Fonts/BasicFonts/Default" />
+						</visual>
+					</property>
+				</section>
+			</page>
+		</category>
+	</category>
+</apt:template>

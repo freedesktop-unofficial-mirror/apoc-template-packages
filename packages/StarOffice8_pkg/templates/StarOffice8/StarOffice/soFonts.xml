@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+	<resImport apt:packagePath="com.sun.star8.apoc.policies.resource.staroffice_policies" />
+	<category apt:name="StarOffice8" apt:label="SO.so8" apt:inlineHelp="SO.cat_staroffice_help">
+		<category apt:name="StarOffice" apt:label="SO.so" apt:inlineHelp="SO.so.cat_staroffice_help">
+			<page apt:name="FontReplacement" apt:label="SO.so.page_fonts" apt:inlineHelp="SO.so.page_font_replace_help" apt:onlineHelp="/StarOffice8/StarOffice/soFonts">
+				<section apt:name="FontHTMLBasic" apt:label="SO.so.sect_html_basic">
+					<property apt:name="FontName" apt:label="SO.so.html_fonts" apt:dataPath="org.openoffice.Office.Common/Font/SourceViewFont/FontName" oor:type="xs:string">
+						<value />
+					</property>
+					<property apt:name="NonProportionalFonts" apt:label="SO.so.html_non_prop" apt:dataPath="org.openoffice.Office.Common/Font/SourceViewFont/NonProportionalFontsOnly" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:name="FontHeight" apt:label="SO.so.html_font_height" apt:dataPath="org.openoffice.Office.Common/Font/SourceViewFont/FontHeight" oor:type="xs:short">
+						<value>10</value>
+					</property>
+				</section>
+				<section apt:name="FontReplacementSection" apt:label="SO.so.page_font_replacements">
+					<property apt:name="ApplyReplacementTable" apt:label="SO.so.apply_table" apt:dataPath="org.openoffice.Office.Common/Font/Substitution/Replacement" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<set apt:name="FontReplacementList" apt:label="SO.so.font_replace_list" apt:dataPath="org.openoffice.Office.Common/Font/Substitution/FontPairs">
+					<page apt:name="FontReplacements" apt:label="SO.so.page_font_replacements" apt:onlineHelp="/StarOffice8/StarOffice/soFonts">
+						<section apt:name="FontNames" apt:label="SO.so.sect_font_names">
+							<property apt:name="FontToReplace" apt:label="SO.so.font_name_replace" apt:dataPath="./$queriedId/ReplaceFont" oor:type="xs:string">
+								<visual>
+									<chooser apt:extendsChooser="/StarOffice8/TextDocument/Fonts/BasicFonts/Default" />
+								</visual>
+							</property>
+							<property apt:name="ReplaceFontWith" apt:label="SO.so.replace_font_with" apt:dataPath="./$queriedId/SubstituteFont" oor:type="xs:string">
+								<visual>
+									<chooser apt:extendsChooser="/StarOffice8/TextDocument/Fonts/BasicFonts/Default" />
+								</visual>
+							</property>
+							<property apt:name="Always" apt:label="SO.so.font_always" apt:dataPath="./$queriedId/Always" oor:type="xs:boolean">
+								<value>false</value>
+								<visual>
+									<checkBox />
+								</visual>
+							</property>
+							<property apt:name="OnScreenOnly" apt:label="SO.so.font_on_screen" apt:dataPath="./$queriedId/OnScreenOnly" oor:type="xs:boolean">
+								<value>false</value>
+								<visual>
+									<checkBox />
+								</visual>
+							</property>
+						</section>
+					</page>
+				</set>
+			</page>
+		</category>
+	</category>
+</apt:template>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+	<resImport apt:packagePath="com.sun.star8.apoc.policies.resource.staroffice_policies" />
+	<category apt:name="StarOffice8" apt:label="SO.so8" apt:inlineHelp="SO.cat_staroffice_help">
+		<category apt:name="Drawing" apt:label="SO.draw.cat_drawing" apt:inlineHelp="SO.draw.cat_drawing_help">
+			<page apt:name="View" apt:label="SO.pres.view" apt:inlineHelp="SO.pres.view_help" apt:onlineHelp="/StarOffice8/Presentation/presView">
+				<section apt:name="AlternativeDisplay" apt:label="SO.pres.alt_dis">
+					<property apt:dataPath="org.openoffice.Office.Draw/Content/Display/PicturePlaceholder" apt:name="ImagePlaceHolders" apt:label="SO.pres.alt_images" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Draw/Content/Display/ContourMode" apt:name="ContourMode" apt:label="SO.pres.alt_contour" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Draw/Content/Display/TextPlaceholder" apt:name="TextPlaceHolders" apt:label="SO.pres.alt_text" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Draw/Content/Display/LineContour" apt:name="LineContourOnly" apt:label="SO.pres.alt_line" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<section apt:name="Display" apt:label="SO.pres.display">
+					<property apt:dataPath="org.openoffice.Office.Draw/Layout/Display/Ruler" apt:name="RulersVisible" apt:label="SO.pres.dis_rulers" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Draw/Layout/Display/Guide" apt:name="Guides" apt:label="SO.pres.dis_guides" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Draw/Layout/Display/Bezier" apt:name="BezierEditor" apt:label="SO.pres.dis_bezier" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Draw/Layout/Display/Contour" apt:name="ContourOfObjects" apt:label="SO.pres.dis_contour" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+			</page>
+		</category>
+	</category>
+</apt:template>

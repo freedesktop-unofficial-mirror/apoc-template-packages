@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+	<resImport apt:packagePath="com.sun.star8.apoc.policies.resource.staroffice_policies" />
+	<category apt:name="StarOffice8" apt:label="SO.so8" apt:inlineHelp="SO.cat_staroffice_help">
+		<category apt:name="StarOffice" apt:label="SO.so" apt:inlineHelp="SO.so.cat_staroffice_help">
+			<page apt:name="Memory" apt:label="SO.so.page_memory" apt:inlineHelp="SO.so.page_memory_help" apt:onlineHelp="/StarOffice8/StarOffice/soMemory">
+				<section apt:name="Undo" apt:label="SO.so.sect_undo">
+					<property apt:dataPath="org.openoffice.Office.Common/Undo/Steps" apt:name="NumOfSteps" apt:label="SO.so.undo_steps" oor:type="xs:int">
+						<value>100</value>
+					</property>
+				</section>
+				<section apt:name="GraphicsCache" apt:label="SO.so.sect_gcache">
+					<property apt:dataPath="org.openoffice.Office.Common/Cache/GraphicManager/TotalCacheSize" apt:name="UseForStarOffice" apt:label="SO.so.gcache_use" oor:type="xs:int">
+						<value>10240000</value>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Cache/GraphicManager/ObjectCacheSize" apt:name="MemPerObject" apt:label="SO.so.gcache_mem" oor:type="xs:int">
+						<value>2560000</value>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/Cache/GraphicManager/ObjectReleaseTime" apt:name="RemoveAfter" apt:label="SO.so.gcache_rm" oor:type="xs:int">
+						<value>600</value>
+					</property>
+				</section>
+				<section apt:name="InsertedObjectsCache" apt:label="SO.so.sect_objcache">
+					<property apt:dataPath="org.openoffice.Office.Common/Cache/Writer/OLE_Objects" apt:name="NumOfObjects" apt:label="SO.so.objcache_num" oor:type="xs:int">
+						<value>20</value>
+					</property>
+				</section>
+			</page>
+		</category>
+	</category>
+</apt:template>

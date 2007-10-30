@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+	<resImport apt:packagePath="org.gnome26.apoc.policies.resource.gnome_policies" />
+	<category apt:name="Gnome2.6" apt:label="GNOME.gno2.6" apt:inlineHelp="GNOME.cat_gnome_help">
+		<category apt:name="FolderOptions" apt:label="GNOME.folderOps" apt:inlineHelp="GNOME.cat_folder_ops_help">
+			<page apt:name="Preview" apt:label="GNOME.preview" apt:inlineHelp="GNOME.page_preview_help" apt:onlineHelp="/Gnome2.6/FolderOptions/folderPreview">
+				<section apt:name="PreviewSection" apt:label="GNOME.preview">
+					<property apt:dataPath="org.gnome.apps.nautilus/preferences/preview_sound" apt:name="PreviewSound" apt:label="GNOME.preview_sound" oor:type="xs:string">
+						<constraints>
+							<enumeration oor:value="always" />
+							<enumeration oor:value="local_only" />
+							<enumeration oor:value="never" />
+						</constraints>
+						<value>local_only</value>
+						<visual apt:type="comboBox" />
+					</property>
+					<property apt:dataPath="org.gnome.apps.nautilus/preferences/show_directory_item_counts" apt:name="ShowDirCounts" apt:label="GNOME.dir_item_counts" oor:type="xs:string">
+						<constraints>
+							<enumeration oor:value="always" />
+							<enumeration oor:value="local_only" />
+							<enumeration oor:value="never" />
+						</constraints>
+						<value>local_only</value>
+						<visual apt:type="comboBox" />
+					</property>
+					<property apt:dataPath="org.gnome.apps.nautilus/preferences/show_icon_text" apt:name="ShowIconText" apt:label="GNOME.show_icon_text" oor:type="xs:string">
+						<constraints>
+							<enumeration oor:value="always" />
+							<enumeration oor:value="local_only" />
+							<enumeration oor:value="never" />
+						</constraints>
+						<value>local_only</value>
+						<visual apt:type="comboBox" />
+					</property>
+					<property apt:dataPath="org.gnome.apps.nautilus/preferences/show_image_thumbnails" apt:name="ShowImageThumbs" apt:label="GNOME.show_image_tn" oor:type="xs:string">
+						<constraints>
+							<enumeration oor:value="always" />
+							<enumeration oor:value="local_only" />
+							<enumeration oor:value="never" />
+						</constraints>
+						<value>local_only</value>
+						<visual apt:type="comboBox" />
+					</property>
+					<property apt:dataPath="org.gnome.apps.nautilus/preferences/thumbnail_limit" apt:name="ThumbnailLimit" apt:label="GNOME.tn_limit" oor:type="xs:int">
+						<constraints>
+							<enumeration oor:value="102400" />
+							<enumeration oor:value="512000" />
+							<enumeration oor:value="1048576" />
+							<enumeration oor:value="3145728" />
+							<enumeration oor:value="5242880" />
+							<enumeration oor:value="10485760" />
+							<enumeration oor:value="104857600" />
+							<enumeration oor:value="1073741824" />
+						</constraints>
+						<value>3145728</value>
+						<visual apt:type="comboBox" />
+					</property>
+				</section>
+			</page>
+		</category>
+	</category>
+</apt:template>

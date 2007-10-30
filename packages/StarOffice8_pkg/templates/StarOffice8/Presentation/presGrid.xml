@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+	<resImport apt:packagePath="com.sun.star8.apoc.policies.resource.staroffice_policies" />
+	<category apt:name="StarOffice8" apt:label="SO.so8" apt:inlineHelp="SO.cat_staroffice_help">
+		<category apt:name="Presentation" apt:label="SO.presentation" apt:inlineHelp="SO.presentation_help">
+			<page apt:name="Grid" apt:label="SO.text.page_grid" apt:inlineHelp="SO.text.page_grid_help" apt:onlineHelp="/StarOffice8/Presentation/presGrid">
+				<section apt:name="GridSection" apt:label="SO.text.sect_grid">
+					<property apt:dataPath="org.openoffice.Office.Impress/Grid/Option/SnapToGrid" apt:name="SnapToGrid" apt:label="SO.text.grid_snapto" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Impress/Grid/Option/VisibleGrid" apt:name="VisibleGrid" apt:label="SO.text.grid_visible" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<section apt:name="Resolution" apt:label="SO.text.sect_resol">
+					<property apt:dataPath="org.openoffice.Office.Impress/Grid/Resolution/XAxis/Metric" apt:name="HorizontalRes" apt:label="SO.text.resol_horiz_metric" oor:type="xs:int">
+						<value>1000</value>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Impress/Grid/Resolution/YAxis/Metric" apt:name="VerticalRes" apt:label="SO.text.resol_vert_metric" oor:type="xs:int">
+						<value>1000</value>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Impress/Grid/Resolution/XAxis/NonMetric" apt:name="HorizontalResNonMetric" apt:label="SO.text.resol_horiz_nonmetric" oor:type="xs:int">
+						<value>1270</value>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Impress/Grid/Resolution/YAxis/NonMetric" apt:name="VerticalResNonMetric" apt:label="SO.text.resol_vert_nonmetric" oor:type="xs:int">
+						<value>1270</value>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Impress/Grid/Option/Synchronize" apt:name="SynchronizeAxes" apt:label="SO.text.resol_axes" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<section apt:name="Subdivision" apt:label="SO.text.sect_subdiv">
+					<property apt:dataPath="org.openoffice.Office.Impress/Grid/Subdivision/XAxis" apt:name="Horizontal" apt:label="SO.text.subdiv_horiz" oor:type="xs:double">
+						<value>1</value>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Impress/Grid/Subdivision/YAxis" apt:name="Vertical" apt:label="SO.text.subdiv_vert" oor:type="xs:double">
+						<value>1</value>
+					</property>
+				</section>
+				<section apt:name="Snap" apt:label="SO.pres.sect_snap">
+					<property apt:dataPath="org.openoffice.Office.Impress/Snap/Object/SnapLine" apt:name="ToSnapLines" apt:label="SO.pres.snap_lines" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Impress/Snap/Object/PageMargin" apt:name="ToPageMargins" apt:label="SO.pres.snap_margins" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Impress/Snap/Object/ObjectFrame" apt:name="ToObjectFrame" apt:label="SO.pres.snap_frame" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Impress/Snap/Object/ObjectPoint" apt:name="ToObjectPoints" apt:label="SO.pres.snap_points" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Impress/Snap/Object/Range" apt:name="SnapRange" apt:label="SO.pres.snap_range" oor:type="xs:int">
+						<value>5</value>
+					</property>
+				</section>
+				<section apt:name="SnapPosition" apt:label="SO.pres.sect_pos">
+					<property apt:dataPath="org.openoffice.Office.Impress/Snap/Position/CreatingMoving" apt:name="WhenCreatingOrMovingObjects" apt:label="SO.pres.pos_create" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Impress/Snap/Position/ExtendEdges" apt:name="ExtendEdges" apt:label="SO.pres.pos_extend" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Impress/Snap/Position/Rotating" apt:name="WhenRotating" apt:label="SO.pres.pos_rotate" apt:xmlHandler="switchStateWhenRotating" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Impress/Snap/Position/RotatingValue" apt:name="ObjectRotationLimit" apt:label="SO.pres.pos_rot_degs" oor:type="xs:int">
+						<value>1500</value>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Impress/Snap/Position/PointReduction" apt:name="PointReduction" apt:label="SO.pres.pos_point" oor:type="xs:int">
+						<value>1500</value>
+					</property>
+				</section>
+				<xmlHandler apt:name="switchStateWhenRotating">
+					<event apt:type="onChange" />
+					<action>
+						<choose>
+							<when apt:test="WhenRotating.value=true">
+								<command>ObjectRotationLimit.enabled=true</command>
+							</when>
+							<otherwise>
+								<command>ObjectRotationLimit.enabled=false</command>
+							</otherwise>
+						</choose>
+					</action>
+				</xmlHandler>
+			</page>
+		</category>
+	</category>
+</apt:template>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+	<resImport apt:packagePath="com.sun.star8.apoc.policies.resource.staroffice_policies" />
+	<category apt:name="StarOffice8" apt:label="SO.so8" apt:inlineHelp="SO.cat_staroffice_help">
+		<category apt:name="Spreadsheet" apt:label="SO.spreadsheet" apt:inlineHelp="SO.spreadsheet_help">
+			<page apt:name="Calculate" apt:label="SO.ss.calculate" apt:inlineHelp="SO.ss.calculate_help" apt:onlineHelp="/StarOffice8/Spreadsheet/ssCalculate">
+				<section apt:name="IterativeReferences" apt:label="SO.ss.calc_iterative">
+					<property apt:dataPath="org.openoffice.Office.Calc/Calculate/IterativeReference/Iteration" apt:name="Iterations" apt:label="SO.ss.iter_iter" apt:xmlHandler="switchStateIterations" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Calc/Calculate/IterativeReference/MinimumChange" apt:name="MinimumChange" apt:label="SO.ss.iter_min" oor:type="xs:double">
+						<value>0.001</value>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Calc/Calculate/IterativeReference/Steps" apt:name="Steps" apt:label="SO.ss.iter_steps" oor:type="xs:int">
+						<value>100</value>
+					</property>
+				</section>
+				<section apt:name="CalculateOptions" apt:label="SO.ss.calc_ops">
+					<property apt:dataPath="org.openoffice.Office.Calc/Calculate/Other/CaseSensitive" apt:name="CaseSensitive" apt:label="SO.ss.ops_case" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Calc/Calculate/Other/DecimalPlaces" apt:name="DecimalPlaces" apt:label="SO.ss.ops_places" oor:type="xs:int">
+						<value>2</value>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Calc/Calculate/Other/Precision" apt:name="PrecisionAsShown" apt:label="SO.ss.ops_prec" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Calc/Calculate/Other/SearchCriteria" apt:name="SearchCriteria" apt:label="SO.ss.ops_search" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Calc/Calculate/Other/RegularExpressions" apt:name="RegularExpressions" apt:label="SO.ss.ops_reg_exps" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Calc/Calculate/Other/FindLabel" apt:name="AutoFindLabels" apt:label="SO.ss.ops_labels" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<xmlHandler apt:name="switchStateIterations">
+					<event apt:type="onChange" />
+					<action>
+						<choose>
+							<when apt:test="Iterations.value=true">
+								<command>MinimumChange.enabled=true</command>
+								<command>Steps.enabled=true</command>
+							</when>
+							<otherwise>
+								<command>MinimumChange.enabled=false</command>
+								<command>Steps.enabled=false</command>
+							</otherwise>
+						</choose>
+					</action>
+				</xmlHandler>
+			</page>
+		</category>
+	</category>
+</apt:template>

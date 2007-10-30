@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+	<resImport apt:packagePath="com.sun.star8.apoc.policies.resource.staroffice_policies" />
+	<category apt:name="StarOffice8" apt:label="SO.so8" apt:inlineHelp="SO.cat_staroffice_help">
+		<category apt:name="Presentation" apt:label="SO.presentation" apt:inlineHelp="SO.presentation_help">
+			<page apt:name="General" apt:label="SO.pres.general" apt:inlineHelp="SO.pres.general_help" apt:onlineHelp="/StarOffice8/Presentation/presGeneral">
+				<section apt:name="TextObjects" apt:label="SO.pres.sect_text">
+					<property apt:dataPath="org.openoffice.Office.Impress/Misc/TextObject/QuickEditing" apt:name="QuickEditing" apt:label="SO.pres.text_edit" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Impress/Misc/TextObject/Selectable" apt:name="TextAreaSelectable" apt:label="SO.pres.text_select" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<section apt:name="NewDocument" apt:label="SO.pres.new">
+					<property apt:dataPath="org.openoffice.Office.Impress/Misc/NewDoc/AutoPilot" apt:name="StartWithAutopilot" apt:label="SO.pres.new_autopilot" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<section apt:name="Settings" apt:label="SO.pres.sect_sett">
+					<property apt:dataPath="org.openoffice.Office.Impress/Misc/BackgroundCache" apt:name="UseBackgroundCache" apt:label="SO.pres.sett_bg" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Impress/Misc/CopyWhileMoving" apt:name="CopyWhenMoving" apt:label="SO.pres.sett_copy" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Impress/Misc/ObjectMoveable" apt:name="ObjectsAlwaysMoveable" apt:label="SO.pres.sett_objs" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<section apt:name="StartPresentation" apt:label="SO.pres.start">
+					<property apt:dataPath="org.openoffice.Office.Impress/Misc/Start/CurrentPage" apt:name="AlwaysCurrentPage" apt:label="SO.pres.start_current" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<section apt:name="Compatibility" apt:label="SO.pres.sect_comp">
+					<property apt:dataPath="org.openoffice.Office.Impress/Misc/Compatibility/PrinterIndependentLayout" apt:name="PrinterMetricForDocFormatting" apt:label="SO.pres.comp_print" oor:type="xs:short">
+						<constraints>
+							<enumeration oor:value="1" />
+							<enumeration oor:value="2" />
+						</constraints>
+						<value>2</value>
+						<visual apt:type="radioButtons" />
+					</property>
+				</section>
+			</page>
+		</category>
+	</category>
+</apt:template>

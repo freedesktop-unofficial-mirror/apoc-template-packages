@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template apt:name="mnComposition">
+	<resImport apt:packagePath="org.mozilla.apoc.policies.resource.mozilla_policies"/>
+	<category apt:name="Mozilla1.4" apt:resId="MOZ.moz1.4">
+		<inlineHelp apt:resId="MOZ.cat_mozilla_help"/>
+		<category apt:name="MailNews" apt:resId="MOZ.mailnews">
+			<inlineHelp apt:resId="MOZ.cat_mailnews_help"/>
+			<page apt:name="Composition" apt:resId="MOZ.mn.comp">
+				<inlineHelp apt:resId="MOZ.page_mnComposition_help"/>
+				<section apt:name="ForwardReply" apt:resId="MOZ.mn.fwd_reply">
+					<property apt:dataPath="org.mozilla.mail/forward_message_mode" apt:name="ForwardMessageMode" apt:resId="MOZ.mn.fwd_as" apt:visualType="comboBox" oor:nillable="true" oor:type="xs:int">
+						<constraints>
+							<enumeration oor:value="0"/>
+							<enumeration oor:value="2"/>
+						</constraints>
+						<value>0</value>
+					</property>
+					<property apt:dataPath="org.mozilla.mail/auto_quote" apt:name="AutoQuote" apt:resId="MOZ.mn.inc_orig" apt:visualType="checkBox" oor:nillable="true" oor:type="xs:boolean">
+						<value>true</value>
+					</property>
+					<property apt:dataPath="org.mozilla.mailnews/reply_on_top" apt:name="ReplyOnTop" apt:resId="MOZ.mn.start_rep" apt:visualType="comboBox" oor:nillable="true" oor:type="xs:int">
+						<constraints>
+							<enumeration oor:value="1"/>
+							<enumeration oor:value="0"/>
+							<enumeration oor:value="2"/>
+						</constraints>
+						<value>0</value>
+					</property>
+				</section>
+				<section apt:name="ComposingMessages" apt:resId="MOZ.mn.compose">
+					<property apt:dataPath="org.mozilla.mail/strictly_mime" apt:name="StrictlyMime" apt:resId="MOZ.mn.use_quoted" apt:visualType="checkBox" oor:nillable="true" oor:type="xs:boolean">
+						<value>false</value>
+					</property>
+					<property apt:dataPath="org.mozilla.mail/warn_on_send_accel_key" apt:name="WarnOnSendAccelKey" apt:resId="MOZ.mn.conf_sc" apt:visualType="checkBox" oor:nillable="true" oor:type="xs:boolean">
+						<value>true</value>
+					</property>
+					<property apt:dataPath="org.mozilla.mailnews/wraplength" apt:name="WrapLength" apt:resId="MOZ.mn.wrap_at" oor:nillable="true" oor:type="xs:int">
+						<value>72</value>
+					</property>
+					<property apt:dataPath="org.mozilla.mailnews/send_default_charset" apt:name="SendDefaultCharSet" apt:resId="MOZ.mn.char_code" oor:nillable="true" oor:type="xs:string">
+						<value>ISO-8859-1</value>
+						<inlineHelp apt:resId="MOZ.mn.char_code_help"/>
+					</property>
+				</section>
+			</page>
+		</category>
+	</category>
+</apt:template>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+	<resImport apt:packagePath="org.gnome26.apoc.policies.resource.gnome_policies" />
+	<category apt:name="Gnome2.6" apt:label="GNOME.gno2.6" apt:inlineHelp="GNOME.cat_gnome_help">
+		<category apt:name="Display" apt:label="GNOME.display" apt:inlineHelp="GNOME.cat_display_help">
+			<page apt:name="Background" apt:label="GNOME.background" apt:inlineHelp="GNOME.page_background_help" apt:onlineHelp="/Gnome2.6/Display/background">
+				<section apt:name="BackgroundSection" apt:label="GNOME.background">
+					<property apt:dataPath="org.gnome.desktop.gnome/background/draw_background" apt:name="DrawBackground" apt:label="GNOME.draw_bg" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.gnome.desktop.gnome/background/picture_options" apt:name="PictureOptions" apt:label="GNOME.pic_ops" apt:xmlHandler="switchStatePictureOptions" oor:type="xs:string">
+						<constraints>
+							<enumeration oor:value="none" />
+							<enumeration oor:value="wallpaper" />
+							<enumeration oor:value="centered" />
+							<enumeration oor:value="scaled" />
+							<enumeration oor:value="stretched" />
+						</constraints>
+						<value>stretched</value>
+						<visual apt:type="comboBox" />
+					</property>
+					<property apt:dataPath="org.gnome.desktop.gnome/background/picture_filename" apt:name="PictureFilename" apt:label="GNOME.pic_name" oor:type="xs:string" apt:inlineHelp="GNOME.picture_filename_help">
+						<value>/usr/share/pixmaps/backgrounds/Sun-Default.png</value>
+					</property>
+					<property apt:dataPath="org.gnome.desktop.gnome/background/color_shading_type" apt:name="ColorShadingType" apt:label="GNOME.col_shade" oor:type="xs:string">
+						<constraints>
+							<enumeration oor:value="horizontal-gradient" />
+							<enumeration oor:value="vertical-gradient" />
+							<enumeration oor:value="solid" />
+						</constraints>
+						<value>solid</value>
+						<visual apt:type="comboBox" />
+					</property>
+					<property apt:dataPath="org.gnome.desktop.gnome/background/primary_color" apt:name="PrimaryColor" apt:label="GNOME.prim_col" oor:type="xs:string" apt:inlineHelp="GNOME.primary_color_help">
+						<value>#76848F</value>
+						<visual apt:type="colorSelector" />
+					</property>
+					<property apt:dataPath="org.gnome.desktop.gnome/background/secondary_color" apt:name="SecondaryColor" apt:label="GNOME.sec_col" oor:type="xs:string" apt:inlineHelp="GNOME.secondary_color_help">
+						<value>#7F7F7F</value>
+						<visual apt:type="colorSelector" />
+					</property>
+				</section>
+				<xmlHandler apt:name="switchStatePictureOptions">
+					<event apt:type="onChange" />
+					<action>
+						<choose>
+							<when apt:test="PictureOptions.value=none">
+								<command>ColorShadingType.enabled=true</command>
+								<command>PrimaryColor.enabled=true</command>
+								<command>SecondaryColor.enabled=true</command>
+								<command>PictureFilename.enabled=false</command>
+							</when>
+							<when apt:test="((PictureOptions.value=wallpaper) or (PictureOptions.value=centered) or (PictureOptions.value=scaled) or (PictureOptions.value=stretched))">
+								<command>ColorShadingType.enabled=false</command>
+								<command>PrimaryColor.enabled=false</command>
+								<command>SecondaryColor.enabled=false</command>
+								<command>PictureFilename.enabled=true</command>
+							</when>
+       							<otherwise>
+								<command>ColorShadingType.enabled=false</command>
+								<command>PrimaryColor.enabled=false</command>
+								<command>SecondaryColor.enabled=false</command>
+								<command>PictureFilename.enabled=false</command>
+							</otherwise>
+						</choose>
+					</action>
+				</xmlHandler>
+			</page>
+		</category>
+	</category>
+</apt:template>

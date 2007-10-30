@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+	<resImport apt:packagePath="org.gnome26.apoc.policies.resource.gnome_policies" />
+	<category apt:name="Gnome2.6" apt:label="GNOME.gno2.6" apt:inlineHelp="GNOME.cat_gnome_help">
+		<category apt:name="Keyboard" apt:label="GNOME.keyboard" apt:inlineHelp="GNOME.cat_keyboard_help">
+			<page apt:name="WindowMngtShortcuts" apt:label="GNOME.win_mngt_sc" apt:inlineHelp="GNOME.page_wins_sc_help" apt:onlineHelp="/Gnome2.6/Keyboard/windowShortcuts">
+				<section apt:name="WinMngtKeys" apt:label="GNOME.win_mngt_keys">
+					<property apt:dataPath="org.gnome.apps.metacity/window_keybindings/activate_window_menu" apt:name="ActWinMenu" apt:label="GNOME.act_win_menu" oor:type="xs:string" apt:inlineHelp="GNOME.activate_window_menu_help">
+						<value>&lt;Alt&gt;space</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/window_keybindings/close" apt:name="Close" apt:label="GNOME.close_win" oor:type="xs:string" apt:inlineHelp="GNOME.close_help">
+						<value>&lt;Alt&gt;F4</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/window_keybindings/toggle_on_all_workspaces" apt:name="ToggleOnAllWs" apt:label="GNOME.tgl_all_ws" oor:type="xs:string" apt:inlineHelp="GNOME.toggle_on_all_workspaces_help">
+						<value>disabled</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/window_keybindings/toggle_shaded" apt:name="ToggleShaded" apt:label="GNOME.tgl_shaded" oor:type="xs:string" apt:inlineHelp="GNOME.toggle_shaded_help">
+						<value>disabled</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/window_keybindings/begin_move" apt:name="BeginMove" apt:label="GNOME.begin_mv" oor:type="xs:string" apt:inlineHelp="GNOME.begin_move_help">
+						<value>&lt;Alt&gt;F7</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/window_keybindings/begin_resize" apt:name="BeginResize" apt:label="GNOME.begin_resize" oor:type="xs:string" apt:inlineHelp="GNOME.begin_resize_help">
+						<value>&lt;Alt&gt;F8</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/window_keybindings/maximize" apt:name="Maximize" apt:label="GNOME.max" oor:type="xs:string" apt:inlineHelp="GNOME.maximize_help">
+						<value>&lt;Alt&gt;F10</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/window_keybindings/unmaximize" apt:name="Unmaximize" apt:label="GNOME.unmax" oor:type="xs:string" apt:inlineHelp="GNOME.unmaximize_help">
+						<value>&lt;Alt&gt;F5</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/window_keybindings/minimize" apt:name="Minimize" apt:label="GNOME.min" oor:type="xs:string" apt:inlineHelp="GNOME.minimize_help">
+						<value>&lt;Alt&gt;F9</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/window_keybindings/toggle_maximized" apt:name="ToggleMaximized" apt:label="GNOME.tgl_max" oor:type="xs:string" apt:inlineHelp="GNOME.toggle_maximized_help">
+						<value>disabled</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/window_keybindings/toggle_fullscreen" apt:name="ToggleFullscreen" apt:label="GNOME.tgl_fullscreen" oor:type="xs:string" apt:inlineHelp="GNOME.toggle_fullscreen_help">
+						<value>disabled</value>
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/window_keybindings/maximize_horizontally" apt:name="MaximizeHoriz" apt:label="GNOME.max_hor" oor:type="xs:string" apt:inlineHelp="GNOME.maximize_horizontally_help">
+						<value />
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/window_keybindings/maximize_vertically" apt:name="MaximizeVert" apt:label="GNOME.max_ver" oor:type="xs:string" apt:inlineHelp="GNOME.maximize_vertically_help">
+						<value />
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/window_keybindings/raise" apt:name="Raise" apt:label="GNOME.raise" oor:type="xs:string" apt:inlineHelp="GNOME.raise_help">
+						<value />
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/window_keybindings/lower" apt:name="Lower" apt:label="GNOME.lower" oor:type="xs:string" apt:inlineHelp="GNOME.lower_help">
+						<value />
+					</property>
+					<property apt:dataPath="org.gnome.apps.metacity/window_keybindings/raise_or_lower" apt:name="RaiseOrLower" apt:label="GNOME.raise_or_lower" oor:type="xs:string" apt:inlineHelp="GNOME.raise_or_lower_help">
+						<value />
+					</property>
+				</section>
+			</page>
+		</category>
+	</category>
+</apt:template>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+	<resImport apt:packagePath="org.gnome26.apoc.policies.resource.gnome_policies" />
+	<category apt:name="Gnome2.6" apt:label="GNOME.gno2.6" apt:inlineHelp="GNOME.cat_gnome_help">
+		<category apt:name="FolderOptions" apt:label="GNOME.folderOps" apt:inlineHelp="GNOME.cat_folder_ops_help">
+			<page apt:name="Views" apt:label="GNOME.views" apt:inlineHelp="GNOME.page_views_help" apt:onlineHelp="/Gnome2.6/FolderOptions/folderOptions">
+				<section apt:name="General" apt:label="GNOME.general">
+					<property apt:dataPath="org.gnome.apps.nautilus/preferences/show_desktop" apt:name="ShowDesktop" apt:label="GNOME.show_dsktp" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.gnome.apps.nautilus/preferences/side_pane_view" apt:name="SidePaneView" apt:label="GNOME.side_pane_view" oor:type="xs:string">
+						<constraints>
+							<enumeration oor:value="OAFIID:Nautilus_Information_View" />
+							<enumeration oor:value="OAFIID:Nautilus_Emblem_View" />
+							<enumeration oor:value="OAFIID:Nautilus_History_View" />
+							<enumeration oor:value="OAFIID:Nautilus_Notes_View" />
+							<enumeration oor:value="OAFIID:Nautilus_File_Manager_Tree_View" />
+						</constraints>
+						<value>OAFIID:Nautilus_File_Manager_Tree_View</value>
+						<visual apt:type="comboBox" />
+					</property>
+					<property apt:dataPath="org.gnome.apps.nautilus/preferences/start_with_location_bar" apt:name="StartWithLocbar" apt:label="GNOME.with_locbar" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.gnome.apps.nautilus/preferences/start_with_sidebar" apt:name="StartWithSidebar" apt:label="GNOME.with_sidebar" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.gnome.apps.nautilus/preferences/start_with_toolbar" apt:name="StartWithToolbar" apt:label="GNOME.with_toolbar" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.gnome.apps.nautilus/preferences/desktop_font" apt:name="DesktopFont" apt:label="GNOME.dsktp_font" oor:type="xs:string" apt:inlineHelp="GNOME.desktop_font_help">
+						<value>Sans 10</value>
+					</property>
+				</section>
+				<section apt:name="DefaultViews" apt:label="GNOME.sect.folder_view">
+					<property apt:dataPath="org.gnome.apps.nautilus/preferences/default_folder_viewer" apt:name="ViewFoldersUsing" apt:label="GNOME.folder.view_using" oor:type="xs:string">
+						<constraints>
+							<enumeration oor:value="list_view" />
+							<enumeration oor:value="icon_view" />
+						</constraints>
+						<value>icon_view</value>
+						<visual apt:type="comboBox" />
+					</property>
+					<property apt:dataPath="org.gnome.apps.nautilus/list_view/default_sort_order" apt:name="ArrangeItems" apt:label="GNOME.folder.view_arrange" oor:type="xs:string">
+						<constraints>
+							<enumeration oor:value="name" />
+							<enumeration oor:value="size" />
+							<enumeration oor:value="type" />
+							<enumeration oor:value="modification_date" />
+							<enumeration oor:value="emblems" />
+						</constraints>
+						<value>name</value>
+						<visual apt:type="comboBox" />
+					</property>
+					<property apt:dataPath="org.gnome.apps.nautilus/preferences/sort_directories_first" apt:name="SortFoldersFirst" apt:label="GNOME.folder.view_sort" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<section apt:name="IconViewDefaults" apt:label="GNOME.sect.view_icon">
+					<property apt:dataPath="org.gnome.apps.nautilus/icon_view/default_zoom_level" apt:name="DefaultZoomLevelIcon" apt:label="GNOME.view.icon_zoom" oor:type="xs:string">
+						<constraints>
+							<enumeration oor:value="smallest" />
+							<enumeration oor:value="smaller" />
+							<enumeration oor:value="small" />
+							<enumeration oor:value="standard" />
+							<enumeration oor:value="large" />
+							<enumeration oor:value="larger" />
+							<enumeration oor:value="largest" />
+						</constraints>
+						<value>small</value>
+						<visual apt:type="comboBox" />
+					</property>
+					<property apt:dataPath="org.gnome.apps.nautilus/icon_view/default_use_tighter_layout" apt:name="UseCompactLayout" apt:label="GNOME.view.icon_compact" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.gnome.apps.nautilus/icon_view/labels_beside_icons" apt:name="TextBesideIcons" apt:label="GNOME.view.icon_text" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<section apt:name="ListViewDefaults" apt:label="GNOME.sect.view_list">
+					<property apt:dataPath="org.gnome.apps.nautilus/list_view/default_zoom_level" apt:name="DefaultZoomLevelList" apt:label="GNOME.view.list_zoom" oor:type="xs:string">
+						<constraints>
+							<enumeration oor:value="smallest" />
+							<enumeration oor:value="smaller" />
+							<enumeration oor:value="small" />
+							<enumeration oor:value="standard" />
+							<enumeration oor:value="large" />
+							<enumeration oor:value="larger" />
+							<enumeration oor:value="largest" />
+						</constraints>
+						<value>small</value>
+						<visual apt:type="comboBox" />
+					</property>
+				</section>
+				<section apt:name="TreeViewDefaults" apt:label="GNOME.sect.view_tree">
+					<property apt:dataPath="org.gnome.apps.nautilus/sidebar_panels/tree/show_only_directories" apt:name="ShowOnlyDirs" apt:label="GNOME.show_only_dirs" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+			</page>
+		</category>
+	</category>
+</apt:template>

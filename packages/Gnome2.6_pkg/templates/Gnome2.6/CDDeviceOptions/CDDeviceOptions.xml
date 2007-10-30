@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+	<resImport apt:packagePath="org.gnome26.apoc.policies.resource.gnome_policies" />
+	<category apt:name="Gnome2.6" apt:label="GNOME.gno2.6" apt:inlineHelp="GNOME.cat_gnome_help">
+		<page apt:name="CDDeviceOptions" apt:label="GNOME.cat.cd_options" apt:inlineHelp="GNOME.page_cd_options_help" apt:onlineHelp="/Gnome2.6/CDDeviceOptions/CDDeviceOptions">
+			<section apt:name="DataDiscs" apt:label="GNOME.sect.cd_data">
+				<property apt:dataPath="org.gnome.apps.magicdev/do_automount" apt:name="MountOnInsert" apt:label="GNOME.cd.data_mount" oor:type="xs:boolean">
+					<value>false</value>
+					<visual>
+						<checkBox />
+					</visual>
+				</property>
+				<property apt:dataPath="org.gnome.apps.magicdev/do_autorun" apt:name="AutoRun" apt:label="GNOME.cd.data_autorun" oor:type="xs:boolean">
+					<value>true</value>
+					<visual>
+						<checkBox />
+					</visual>
+				</property>
+			</section>
+			<section apt:name="AudioDiscs" apt:label="GNOME.sect.cd_audio">
+				<property apt:dataPath="org.gnome.apps.magicdev/do_cd_play" apt:name="AudioRunOnInsert" apt:label="GNOME.cd.audio_run" apt:xmlHandler="switchStateAudio" oor:type="xs:boolean">
+					<value>true</value>
+					<visual>
+						<checkBox />
+					</visual>
+				</property>
+				<property apt:dataPath="org.gnome.apps.magicdev/cd_play_command" apt:name="AudioCommand" apt:label="GNOME.cd.audio_command" oor:type="xs:string">
+					<value>gnome-cd --unique --play --device %d</value>
+				</property>
+			</section>
+			<section apt:name="BlankDiscs" apt:label="GNOME.sect.cd_blank">
+				<property apt:dataPath="org.gnome.apps.magicdev/do_cd_burn" apt:name="BlankRunOnInsert" apt:label="GNOME.cd.blank_run" apt:xmlHandler="switchStateBlank" oor:type="xs:boolean">
+					<value>false</value>
+					<visual>
+						<checkBox />
+					</visual>
+				</property>
+				<property apt:dataPath="org.gnome.apps.magicdev/cd_burn_command" apt:name="BlankCommand" apt:label="GNOME.cd.audio_command" oor:type="xs:string">
+					<value />
+				</property>
+			</section>
+			<section apt:name="DVDDiscs" apt:label="GNOME.sect.cd_dvd">
+				<property apt:dataPath="org.gnome.apps.magicdev/do_dvd_play" apt:name="DVDRunOnInsert" apt:label="GNOME.cd.dvd_run" apt:xmlHandler="switchStateDVD" oor:type="xs:boolean">
+					<value>false</value>
+					<visual>
+						<checkBox />
+					</visual>
+				</property>
+				<property apt:dataPath="org.gnome.apps.magicdev/dvd_play_command" apt:name="DVDCommand" apt:label="GNOME.cd.audio_command" oor:type="xs:string">
+					<value />
+				</property>
+			</section>
+			<xmlHandler apt:name="switchStateAudio">
+				<event apt:type="onChange" />
+				<action>
+					<choose>
+						<when apt:test="AudioRunOnInsert.value=true">
+							<command>AudioCommand.enabled=true</command>
+						</when>
+						<otherwise>
+							<command>AudioCommand.enabled=false</command>
+						</otherwise>
+					</choose>
+				</action>
+			</xmlHandler>
+			<xmlHandler apt:name="switchStateBlank">
+				<event apt:type="onChange" />
+				<action>
+					<choose>
+						<when apt:test="BlankRunOnInsert.value=true">
+							<command>BlankCommand.enabled=true</command>
+						</when>
+						<otherwise>
+							<command>BlankCommand.enabled=false</command>
+						</otherwise>
+					</choose>
+				</action>
+			</xmlHandler>
+			<xmlHandler apt:name="switchStateDVD">
+				<event apt:type="onChange" />
+				<action>
+					<choose>
+						<when apt:test="DVDRunOnInsert.value=true">
+							<command>DVDCommand.enabled=true</command>
+						</when>
+						<otherwise>
+							<command>DVDCommand.enabled=false</command>
+						</otherwise>
+					</choose>
+				</action>
+			</xmlHandler>
+		</page>
+	</category>
+</apt:template>

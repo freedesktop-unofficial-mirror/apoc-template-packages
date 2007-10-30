@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template apt:name="advProxy">
+	<resImport apt:packagePath="org.mozilla.apoc.policies.resource.mozilla_policies"/>
+	<category apt:name="Mozilla1.4" apt:resId="MOZ.moz1.4">
+		<inlineHelp apt:resId="MOZ.cat_mozilla_help"/>
+		<category apt:name="Advanced" apt:resId="MOZ.advanced">
+			<inlineHelp apt:resId="MOZ.cat_advanced_help"/>
+			<page apt:name="Proxy" apt:resId="MOZ.adv.proxy">
+				<inlineHelp apt:resId="MOZ.page_advProxies_help"/>
+				<section apt:name="ProxyConfiguration" apt:resId="MOZ.adv.cfg_proxy">
+					<property apt:dataPath="org.mozilla.config/use_system_prefs" apt:name="UseSystemPrefs" apt:resId="MOZ.adv.use_system_prefs" apt:visualType="checkBox" oor:nillable="true" oor:type="xs:boolean">
+						<value>true</value>
+					</property>
+					<property apt:dataPath="org.mozilla.network/proxy/type" apt:name="Type" apt:resId="MOZ.adv.prox_type" apt:visualType="radioButtons" oor:nillable="true" oor:type="xs:int">
+						<constraints>
+							<enumeration oor:value="0"/>
+							<enumeration oor:value="1"/>
+							<enumeration oor:value="2"/>
+						</constraints>
+						<value>0</value>
+					</property>			
+					<property apt:dataPath="org.mozilla.network/proxy/http" apt:name="HTTP" apt:resId="MOZ.adv.man_http" oor:nillable="true" oor:type="xs:string">
+						<inlineHelp apt:resId="MOZ.adv.man_http_help"/>
+					</property>
+					<property apt:dataPath="org.mozilla.network/proxy/http_port" apt:name="HTTPPort" apt:resId="MOZ.adv.man_http_p" oor:nillable="true" oor:type="xs:int">
+						<value>0</value>
+					</property>
+					<property apt:dataPath="org.mozilla.network/proxy/ssl" apt:name="SSL" apt:resId="MOZ.adv.man_ssl" oor:nillable="true" oor:type="xs:string"/>
+					<property apt:dataPath="org.mozilla.network/proxy/ssl_port" apt:name="SSLPort" apt:resId="MOZ.adv.man_ssl_p" oor:nillable="true" oor:type="xs:int">
+						<value>0</value>
+					</property>
+					<property apt:dataPath="org.mozilla.network/proxy/ftp" apt:name="FTP" apt:resId="MOZ.adv.man_ftp" oor:nillable="true" oor:type="xs:string"/>
+					<property apt:dataPath="org.mozilla.network/proxy/ftp_port" apt:name="FTPPort" apt:resId="MOZ.adv.man_ftp_p" oor:nillable="true" oor:type="xs:int">
+						<value>0</value>
+					</property>
+					<property apt:dataPath="org.mozilla.network/proxy/gopher" apt:name="Gopher" apt:resId="MOZ.adv.man_gop" oor:nillable="true" oor:type="xs:string"/>
+					<property apt:dataPath="org.mozilla.network/proxy/gopher_port" apt:name="GopherPort" apt:resId="MOZ.adv.man_gop_p" oor:nillable="true" oor:type="xs:int">
+						<value>0</value>
+					</property>
+					<property apt:dataPath="org.mozilla.network/proxy/socks" apt:name="SOCKS" apt:resId="MOZ.adv.man_sks" oor:nillable="true" oor:type="xs:string"/>
+					<property apt:dataPath="org.mozilla.network/proxy/socks_port" apt:name="SOCKSPort" apt:resId="MOZ.adv.man_sks_p" oor:nillable="true" oor:type="xs:int">
+						<value>0</value>
+					</property>
+					<property apt:dataPath="org.mozilla.network/proxy/socks_version" apt:name="SOCKSVersion" apt:resId="MOZ.adv.socks_ver" apt:visualType="radioButtons" oor:nillable="true" oor:type="xs:int">
+						<constraints>
+							<enumeration oor:value="4"/>
+							<enumeration oor:value="5"/>
+						</constraints>
+						<value>5</value>
+					</property>			
+					<property apt:dataPath="org.mozilla.network/proxy/no_proxies_on" apt:name="NoProxyFor" apt:resId="MOZ.adv.no_proxy" oor:nillable="true" oor:type="xs:string">
+						<value>localhost, 127.0.0.1</value>
+					</property>
+					<property apt:dataPath="org.mozilla.network/proxy/autoconfig_url" apt:name="AutoConfigURL" apt:resId="MOZ.adv.auto_url" oor:nillable="true" oor:type="xs:string">
+						<inlineHelp apt:resId="MOZ.adv.auto_url_help"/>
+					</property>
+				</section>
+			</page>
+		</category>
+	</category>
+</apt:template>

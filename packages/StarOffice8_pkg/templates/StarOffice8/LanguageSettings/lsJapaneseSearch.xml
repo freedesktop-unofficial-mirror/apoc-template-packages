@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+ Copyright 2007 Sun Microsystems, Inc. All rights reserved.
+ 
+ The contents of this file are subject to the terms of either
+ the GNU General Public License Version 2 only ("GPL") or
+ the Common Development and Distribution License("CDDL")
+ (collectively, the "License"). You may not use this file
+ except in compliance with the License. You can obtain a copy
+ of the License at www.sun.com/CDDL or at COPYRIGHT. See the
+ License for the specific language governing permissions and
+ limitations under the License. When distributing the software,
+ include this License Header Notice in each file and include
+ the License file at /legal/license.txt. If applicable, add the
+ following below the License Header, with the fields enclosed
+ by brackets [] replaced by your own identifying information:
+ "Portions Copyrighted [year] [name of copyright owner]"
+ 
+ Contributor(s):
+ 
+ If you wish your version of this file to be governed by
+ only the CDDL or only the GPL Version 2, indicate your
+ decision by adding "[Contributor] elects to include this
+ software in this distribution under the [CDDL or GPL
+ Version 2] license." If you don't indicate a single choice
+ of license, a recipient has the option to distribute your
+ version of this file under either the CDDL, the GPL Version
+ 2 or to extend the choice of license to its licensees as
+ provided above. However, if you add GPL Version 2 code and
+ therefore, elected the GPL Version 2 license, then the
+ option applies only if the new code is made subject to such
+ option by the copyright holder.
+-->
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+	<resImport apt:packagePath="com.sun.star8.apoc.policies.resource.staroffice_policies" />
+	<category apt:name="StarOffice8" apt:label="SO.so8" apt:inlineHelp="SO.cat_staroffice_help">
+		<category apt:name="LanguageSettings" apt:label="SO.lang_sett" apt:inlineHelp="SO.cat_lang_settings_help">
+			<page apt:name="JapaneseSearch" apt:label="SO.ls.jap_search" apt:inlineHelp="SO.ls.page_jap_search_help" apt:onlineHelp="/StarOffice8/LanguageSettings/lsJapaneseSearch">
+				<section apt:name="UppercaseLowercaseSection" apt:label="SO.ls.upper_lower">
+					<property apt:dataPath="org.openoffice.Office.Common/SearchOptions/IsMatchCase" apt:name="UppercaseLowercase" apt:label="SO.ls.upper_lower_match" oor:type="xs:boolean">
+						<value>false</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<section apt:name="TreatAsEqual" apt:label="SO.ls.treat_equal">
+					<property apt:dataPath="org.openoffice.Office.Common/SearchOptions/Japanese/IsMatchFullHalfWidthForms" apt:name="IsMatchFullHalfWidthForms" apt:label="SO.ls.full_half" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/SearchOptions/Japanese/IsMatchHiraganaKatakana" apt:name="IsMatchHiraganaKatakana" apt:label="SO.ls.hiragana" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/SearchOptions/Japanese/IsMatchContractions" apt:name="IsMatchContractions" apt:label="SO.ls.contractions" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/SearchOptions/Japanese/IsMatchMinusDashCho-on" apt:name="IsMatchMinusDashCho-on" apt:label="SO.ls.minus_dash" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/SearchOptions/Japanese/IsMatchRepeatCharMarks" apt:name="IsMatchRepeatCharMarks" apt:label="SO.ls.char_marks" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/SearchOptions/Japanese/IsMatchVariantFormKanji" apt:name="IsMatchVariantFormKanji" apt:label="SO.ls.kanji" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/SearchOptions/Japanese/IsMatchOldKanaForms" apt:name="IsMatchOldKanaForms" apt:label="SO.ls.kana" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/SearchOptions/Japanese/IsMatch_DiZi_DuZu" apt:name="IsMatch_DiZi_DuZu" apt:label="SO.ls.dizi" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/SearchOptions/Japanese/IsMatch_BaVa_HaFa" apt:name="IsMatch_BaVa_HaFa" apt:label="SO.ls.bava" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/SearchOptions/Japanese/IsMatch_TsiThiChi_DhiZi" apt:name="IsMatch_TsiThiChi_DhiZi" apt:label="SO.ls.tsi" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/SearchOptions/Japanese/IsMatch_HyuIyu_ByuVyu" apt:name="IsMatch_Hyulyu_ByuVyu" apt:label="SO.ls.hyu" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/SearchOptions/Japanese/IsMatch_SeShe_ZeJe" apt:name="IsMatch_SeShe_ZeJe" apt:label="SO.ls.seshe" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/SearchOptions/Japanese/IsMatch_IaIya" apt:name="IsMatch_Ialya" apt:label="SO.ls.iaiya" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/SearchOptions/Japanese/IsMatch_KiKu" apt:name="IsMatch_KiKu" apt:label="SO.ls.kiku" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/SearchOptions/Japanese/IsIgnoreProlongedSoundMark" apt:name="IsIgnoreProlongedSoundMark" apt:label="SO.ls.prolonged" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+				<section apt:name="Ignore" apt:label="SO.ls.ignore">
+					<property apt:dataPath="org.openoffice.Office.Common/SearchOptions/Japanese/IsIgnorePunctuation" apt:name="IsIgnorePunctuation" apt:label="SO.ls.punctuation" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/SearchOptions/Japanese/IsIgnoreWhitespace" apt:name="IsIgnoreWhitespace" apt:label="SO.ls.whitespace" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+					<property apt:dataPath="org.openoffice.Office.Common/SearchOptions/Japanese/IsIgnoreMiddleDot" apt:name="IsIgnoreMiddleDot" apt:label="SO.ls.middle_dot" oor:type="xs:boolean">
+						<value>true</value>
+						<visual>
+							<checkBox />
+						</visual>
+					</property>
+				</section>
+			</page>
+		</category>
+	</category>
+</apt:template>
