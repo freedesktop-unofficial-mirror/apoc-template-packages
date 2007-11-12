@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+   <resImport apt:packagePath="org.mozilla.apoc.policies.resource.firefox15_policies" />
+     <category apt:name="Firefox1.5" apt:label="Firefox.firefox1.5" apt:inlineHelp="Firefox.cat_firefox_help">
+      <category apt:name="Privacy" apt:label="Firefox.privacy" apt:inlineHelp="Firefox.cat_privacy_help">
+        <page apt:name="DownloadHistory" apt:label="Firefox.privacy.download_history" apt:inlineHelp="Firefox.privacy.page_download_history_help" apt:onlineHelp="/Firefox1.5/General/privDownloadHistory">
+         <section apt:name="DownloadManager" apt:label="Firefox.privacy.download_mananger">
+            <property apt:dataPath="org.mozilla.browser/download/manager/retention" apt:name="RemoveFiles" apt:label="Firefox.privacy.remove_files" oor:type="xs:int">
+                <constraints>
+                   <enumeration oor:value="0" />
+                   <enumeration oor:value="1" />
+                   <enumeration oor:value="2" />
+                </constraints>
+                <value>2</value>
+                <visual apt:type="radioButtons" />
+            </property>
+          </section>
+     </page>
+    </category>
+   </category>
+</apt:template>
+
+
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+   <resImport apt:packagePath="org.mozilla.apoc.policies.resource.firefox15_policies" />
+     <category apt:name="Firefox1.5" apt:label="Firefox.firefox1.5" apt:inlineHelp="Firefox.cat_firefox_help">
+        <page apt:name="Downloads" apt:label="Firefox.downloads" apt:inlineHelp="Firefox.page_downloads_help" apt:onlineHelp="/Firefox1.5/Downloads/Downloads">
+         <section apt:name="DownloadFolder" apt:label="Firefox.downloads.download_folder">
+            <property apt:dataPath="org.mozilla.browser/download/useDownloadDir" apt:name="UseDownloadDir" apt:label="Firefox.downloads.use_download_dir" oor:type="xs:boolean">
+               <value>true</value>
+               <visual apt:type="checkBox" />
+            </property>
+            <property apt:dataPath="org.mozilla.browser/download/folderList" apt:name="DownloadFolderList" apt:label="Firefox.downloads.folder_list" oor:type="xs:int">
+                <constraints>
+                   <enumeration oor:value="0" />
+                   <enumeration oor:value="1" />
+                </constraints>
+                <value>0</value>
+                <visual apt:type="radioButtons" />
+            </property>
+          </section>
+         <section apt:name="DownloadManagerBehavior" apt:label="Firefox.downloads.download_manager_behavior">
+            <property apt:dataPath="org.mozilla.browser/download/manager/closeWhenDone" apt:name="downloadmanagercloseWhenDone" apt:label="Firefox.downloads.managercloseWhenDone" oor:type="xs:boolean">
+               <value>false</value>
+               <visual apt:type="checkBox" />
+           </property>
+           <property apt:dataPath="org.mozilla.browser/download/manager/showWhenStarting" apt:name="downloadmanagershowWhenStarting" apt:label="Firefox.downloads.managershowWhenStarting" oor:type="xs:boolean">
+             <value>true</value>
+             <visual apt:type="checkBox" />
+           </property>
+         </section>
+    </page>
+   </category>
+</apt:template>
+
+
+

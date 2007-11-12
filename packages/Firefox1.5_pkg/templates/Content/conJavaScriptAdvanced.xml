@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+   <resImport apt:packagePath="org.mozilla.apoc.policies.resource.firefox15_policies" />
+     <category apt:name="Firefox1.5" apt:label="Firefox.firefox1.5" apt:inlineHelp="Firefox.cat_firefox_help">
+      <category apt:name="Content" apt:label="Firefox.content" apt:inlineHelp="Firefox.cat_content_help">
+        <page apt:name="JavaScript Advanced" apt:label="Firefox.content.javascript_advanced" apt:inlineHelp="Firefox.content.page_javascript_advanced_help" apt:onlineHelp="/Firefox1.5/Content/conJavaScriptAdvanced">
+         <section apt:name="General" apt:label="Firefox.web_features.general">
+            <property apt:dataPath="org.mozilla.dom/disable_window_move_resize" apt:name="DisableWindowMoveResize" apt:label="Firefox.content.disable_window_move_resize" oor:type="xs:boolean">
+		<value>false</value>
+		<visual>
+			<checkBox />
+		</visual>
+            </property>
+            <property apt:dataPath="org.mozilla.dom/disable_window_flip" apt:name="DisableWindowFlip" apt:label="Firefox.content.riase_lower_windows" oor:type="xs:boolean">
+		<value>false</value>
+		<visual>
+			<checkBox />
+		</visual>
+            </property>
+            <property apt:dataPath="org.mozilla.dom/event.contextmenu.enabled" apt:name="DisableContextMenus" apt:label="Firefox.content.disable_content_menus" oor:type="xs:boolean">
+		<value>false</value>
+                <visual apt:type="checkBox" />
+            </property>
+            <property apt:dataPath="org.mozilla.dom/disable_window_open_feature/status" apt:name="Status" apt:label="Firefox.content.disable_status" oor:type="xs:boolean">
+		<value>false</value>
+		<visual>
+			<checkBox />
+		</visual>
+            </property>
+            <property apt:dataPath="org.mozilla.dom/disable_window_status_change" apt:name="DisableWindowStatusChange" apt:label="Firefox.content.disable_windows_status_change" oor:type="xs:boolean">
+		<value>false</value>
+		<visual>
+			<checkBox />
+		</visual>
+            </property>
+         </section>
+     </page>
+    </category>
+   </category>
+</apt:template>
+
+
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+   <resImport apt:packagePath="org.mozilla.apoc.policies.resource.firefox15_policies" />
+     <category apt:name="Firefox1.5" apt:label="Firefox.firefox1.5" apt:inlineHelp="Firefox.cat_firefox_help">
+      <category apt:name="Content" apt:label="Firefox.content" apt:inlineHelp="Firefox.cat_content_help">
+        <page apt:name="Colors" apt:label="Firefox.content.colors" apt:inlineHelp="Firefox.content.page_colors_help" apt:onlineHelp="/Firefox1.5/Content/conColors">
+          <section apt:name="ColorSection" apt:label="Firefox.content.text_and_background_color">
+             <property apt:dataPath="org.mozilla.browser/display/foreground_color" apt:name="ForegroundColor" apt:label="Firefox.content.foreground_color" oor:type="xs:string" apt:inlineHelp="Firefox.general.foreground_color_help">
+                <value>#000000</value>
+                <visual apt:type="colorSelector" />
+             </property>
+             <property apt:dataPath="org.mozilla.browser/display/background_color" apt:name="BackgroundColor" apt:label="Firefox.content.background_color" oor:type="xs:string" apt:inlineHelp="Firefox.general.background_color_help">
+                <value>#FFFFFF</value>
+                <visual apt:type="colorSelector" />
+             </property>
+             <property apt:dataPath="org.mozilla.browser/display/use_system_colors" apt:name="UseSystemColors" apt:label="Firefox.content.use_sys" oor:type="xs:boolean">
+                <value>false</value>
+                <visual apt:type="checkBox" />
+             </property>
+         </section>
+          <section apt:name="LinkColor" apt:label="Firefox.general.linkcolor">
+             <property apt:dataPath="org.mozilla.browser/anchor_color" apt:name="AnchorColor" apt:label="Firefox.content.ul" oor:type="xs:string" apt:inlineHelp="Firefox.general.anchor_color_help">
+                <value>#000000</value>
+                <visual apt:type="colorSelector" />
+             </property>
+             <property apt:dataPath="org.mozilla.browser/visited_color" apt:name="VisitedColor" apt:label="Firefox.content.visited" oor:type="xs:string" apt:inlineHelp="Firefox.general.visited_color_help">
+                <value>#FF0FF</value>
+                <visual apt:type="colorSelector" />
+             </property>
+             <property apt:dataPath="org.mozilla.browser/underline_anchors" apt:name="UnderlineAnchors" apt:label="Firefox.content.ul_links" oor:type="xs:boolean">
+                <value>true</value>
+                <visual apt:type="checkBox" />
+             </property>
+          </section>
+          <section apt:name="General" apt:label="Firefox.content.general">
+             <property apt:dataPath="org.mozilla.browser/display/use_document_colors" apt:name="UseDecumentColors" apt:label="Firefox.content.use_document_colors" oor:type="xs:boolean">
+                <value>true</value>
+                <visual apt:type="checkBox" />
+             </property>
+          </section>
+     </page>
+    </category>
+   </category>
+</apt:template>
+
+
+

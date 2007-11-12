@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+   <resImport apt:packagePath="org.mozilla.apoc.policies.resource.firefox15_policies" />
+     <category apt:name="Firefox1.5" apt:label="Firefox.firefox1.5" apt:inlineHelp="Firefox.cat_firefox_help">
+       <category apt:name="General" apt:label="Firefox.general" apt:inlineHelp="Firefox.cat_general_help">
+        <page apt:name="ConfigureProxies" apt:label="Firefox.general.cfg_proxy" apt:inlineHelp="Firefox.general.page_cfg_proxy_help" apt:onlineHelp="/Firefox1.5/General/genConfigureProxies">
+          <section apt:name="ProxyConfiguration" apt:label="Firefox.general.cfg_proxy">
+             <property apt:dataPath="org.mozilla.network/proxy/type" apt:name="Type" apt:label="Firefox.general.prox_type" oor:type="xs:int">
+                <constraints>
+                   <enumeration oor:value="0" />
+                   <enumeration oor:value="4" />
+                   <enumeration oor:value="1" />
+                   <enumeration oor:value="2" />
+                </constraints>
+                <value>0</value>
+                <visual apt:type="radioButtons" />
+             </property>
+             <property apt:dataPath="org.mozilla.network/proxy/share_proxy_settings" apt:name="ShareProxySettings" apt:label="Firefox.general.share_proxy_settings" oor:type="xs:bool">
+                <value>false</value>
+                <visual apt:type="checkBox"/>
+             </property>
+             <property apt:dataPath="org.mozilla.network/proxy/http" apt:name="HTTP" apt:label="Firefox.general.man_http" oor:type="xs:string" apt:inlineHelp="Firefox.general.man_http_help">
+             </property>
+             <property apt:dataPath="org.mozilla.network/proxy/http_port" apt:name="HTTPPort" apt:label="Firefox.general.man_http_p" oor:type="xs:int">
+                <value>0</value>
+             </property>
+             <property apt:dataPath="org.mozilla.network/proxy/ssl" apt:name="SSL" apt:label="Firefox.general.man_ssl" oor:type="xs:string" />
+             <property apt:dataPath="org.mozilla.network/proxy/ssl_port" apt:name="SSLPort" apt:label="Firefox.general.man_ssl_p" oor:type="xs:int">
+                <value>0</value>
+             </property>
+             <property apt:dataPath="org.mozilla.network/proxy/ftp" apt:name="FTP" apt:label="Firefox.general.man_ftp" oor:type="xs:string" />
+             <property apt:dataPath="org.mozilla.network/proxy/ftp_port" apt:name="FTPPort" apt:label="Firefox.general.man_ftp_p" oor:type="xs:int">
+                <value>0</value>
+             </property>
+             <property apt:dataPath="org.mozilla.network/proxy/gopher" apt:name="Gopher" apt:label="Firefox.general.man_gop" oor:type="xs:string" />
+             <property apt:dataPath="org.mozilla.network/proxy/gopher_port" apt:name="GopherPort" apt:label="Firefox.general.man_gop_p" oor:type="xs:int">
+                <value>0</value>
+             </property>
+             <property apt:dataPath="org.mozilla.network/proxy/socks" apt:name="SOCKS" apt:label="Firefox.general.man_sks" oor:type="xs:string" />
+             <property apt:dataPath="org.mozilla.network/proxy/socks_port" apt:name="SOCKSPort" apt:label="Firefox.general.man_sks_p" oor:type="xs:int">
+                <value>0</value>
+             </property>
+             <property apt:dataPath="org.mozilla.network/proxy/socks_version" apt:name="SOCKSVersion" apt:label="Firefox.general.socks_ver" oor:type="xs:int">
+                <constraints>
+                   <enumeration oor:value="4" />                                                         
+                   <enumeration oor:value="5" />
+                </constraints>
+                <value>5</value>
+                <visual apt:type="radioButtons" />
+             </property>
+             <property apt:dataPath="org.mozilla.network/proxy/no_proxies_on" apt:name="NoProxyFor" apt:label="Firefox.general.no_proxy" oor:type="xs:string">
+                <value>localhost, 127.0.0.1</value>
+             </property>
+             <property apt:dataPath="org.mozilla.network/proxy/autoconfig_url" apt:name="AutoConfigURL" apt:label="Firefox.general.auto_url" oor:type="xs:string" apt:inlineHelp="Firefox.general.auto_url_help"></property>
+          </section>
+        </page>
+      </category>
+     </category>
+</apt:template>

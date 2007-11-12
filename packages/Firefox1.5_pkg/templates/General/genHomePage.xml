@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+   <resImport apt:packagePath="org.mozilla.apoc.policies.resource.firefox15_policies" />
+     <category apt:name="Firefox1.5" apt:label="Firefox.firefox1.5" apt:inlineHelp="Firefox.cat_firefox_help">
+      <category apt:name="General" apt:label="Firefox.general" apt:inlineHelp="Firefox.cat_general_help">
+        <page apt:name="HomePage" apt:label="Firefox.general.homepage" apt:inlineHelp="Firefox.general.page_homepage_help" apt:onlineHelp="/Firefox1.5/General/genHomePage">
+         <section apt:name="HomePage" apt:label="Firefox.general.homepage">
+             <property apt:dataPath="org.mozilla.browser/startup/homepage" apt:name="HomePage" apt:label="Firefox.general.homepage_location" oor:type="xs:string" apt:inlineHelp="Firefox.general.homepage_location_help">
+               <value>http://www.sun.com</value>
+             </property>
+          </section>
+        </page>
+     </category>
+   </category>
+</apt:template>

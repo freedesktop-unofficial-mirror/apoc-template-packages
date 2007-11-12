@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+   <resImport apt:packagePath="org.mozilla.apoc.policies.resource.firefox15_policies" />
+     <category apt:name="Firefox1.5" apt:label="Firefox.firefox1.5" apt:inlineHelp="Firefox.cat_firefox_help">
+      <category apt:name="Advnaced" apt:label="Firefox.advanced" apt:inlineHelp="Firefox.cat_advanced_help">
+        <page apt:name="Update" apt:label="Firefox.advanced.update" apt:inlineHelp="Firefox.advanced.page_update_help" apt:onlineHelp="/Firefox1.5/Advanced/advUpdate">
+         <section apt:name="SoftwareUpdate" apt:label="Firefox.advanced.software_update">
+            <property apt:dataPath="org.mozilla.app/update/enabled" apt:name="UpdateEnabled" apt:label="Firefox.advanced.update_enabled" oor:type="xs:boolean">
+               <value>true</value>
+               <visual apt:type="checkBox" />
+            </property>
+            <property apt:dataPath="org.mozilla.extensions/update/enabled" apt:name="ExtensionsUpdateEnabled" apt:label="Firefox.advanced.extensions_update_enabled" oor:type="xs:boolean">
+               <value>true</value>
+               <visual apt:type="checkBox" />
+            </property>
+            <property apt:dataPath="org.mozilla.browser/search/update" apt:name="SearchUpdate" apt:label="Firefox.advanced.search_update" oor:type="xs:boolean">
+               <value>true</value>
+               <visual apt:type="checkBox" />
+            </property>
+         </section>
+         <section apt:name="AutoUpdate" apt:label="Firefox.advanced.auto_update">
+            <property apt:dataPath="org.mozilla.app/update/auto" apt:name="UpdateAuto" apt:label="Firefox.advanced.update_auto" oor:type="xs:boolean">
+               <constraints>
+                  <enumeration oor:value="true" />
+                  <enumeration oor:value="false" />
+               </constraints>
+               <value>false</value>
+               <visual apt:type="radioButtons" />
+            </property>
+            <property apt:dataPath="org.mozilla.app/update/mode" apt:name="UpdateMode" apt:label="Firefox.advanced.update_mode" oor:type="xs:int">
+               <constraints>
+                  <enumeration oor:value="0" />
+                  <enumeration oor:value="1" />
+               </constraints>
+               <value>1</value>
+               <visual apt:type="radioButtons" />
+            </property>
+         </section>
+      </page>
+    </category>
+   </category>
+</apt:template>
+
+
+

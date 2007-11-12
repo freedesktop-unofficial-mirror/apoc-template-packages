@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+   <resImport apt:packagePath="org.mozilla.apoc.policies.resource.firefox15_policies" />
+     <category apt:name="Firefox1.5" apt:label="Firefox.firefox1.5" apt:inlineHelp="Firefox.cat_firefox_help">
+      <category apt:name="Privacy" apt:label="Firefox.privacy" apt:inlineHelp="Firefox.cat_privacy_help">
+        <page apt:name="Settings" apt:label="Firefox.privacy.settings" apt:inlineHelp="Firefox.privacy.page_settings_help" apt:onlineHelp="/Firefox1.5/General/privSettings">
+          <section apt:name="PrivateData" apt:label="Firefox.privacy.private_data">
+            <property apt:dataPath="org.mozilla.privacy/item/history" apt:name="History" apt:label="Firefox.privacy.history" oor:type="xs:boolean">
+               <value>true</value>
+               <visual apt:type="checkBox" />
+            </property>
+            <property apt:dataPath="org.mozilla.privacy/item/formdata" apt:name="Formdata" apt:label="Firefox.privacy.formdata" oor:type="xs:boolean">
+               <value>true</value>
+               <visual apt:type="checkBox" />
+            </property>
+            <property apt:dataPath="org.mozilla.privacy/item/passwords" apt:name="Passwords" apt:label="Firefox.privacy.passwords" oor:type="xs:boolean">
+               <value>false</value>
+               <visual apt:type="checkBox" />
+            </property>
+            <property apt:dataPath="org.mozilla.privacy/item/downloads" apt:name="Downloads" apt:label="Firefox.privacy.downloads" oor:type="xs:boolean">
+               <value>true</value>
+               <visual apt:type="checkBox" />
+            </property>
+             <property apt:dataPath="org.mozilla.privacy/item/cookies" apt:name="Cookies" apt:label="Firefox.privacy.cookies" oor:type="xs:boolean">
+               <value>false</value>
+               <visual apt:type="checkBox" />
+            </property>
+            <property apt:dataPath="org.mozilla.privacy/item/cache" apt:name="Cache" apt:label="Firefox.privacy.cache" oor:type="xs:boolean">
+               <value>true</value>
+               <visual apt:type="checkBox" />
+            </property>
+            <property apt:dataPath="org.mozilla.privacy/item/sessions" apt:name="Sessions" apt:label="Firefox.privacy.sessions" oor:type="xs:boolean">
+               <value>true</value>
+               <visual apt:type="checkBox" />
+            </property>
+       </section>
+       <section apt:name="Settings" apt:label="Firefox.privacy.settings">
+            <property apt:dataPath="org.mozilla.privacy/sanitize/sanitizeOnShutdown" apt:name="SanitizeOnShutdown" apt:label="Firefox.privacy.sanitize_on_shutdown" oor:type="xs:boolean">
+               <value>false</value>
+               <visual apt:type="checkBox" />
+            </property>
+            <property apt:dataPath="org.mozilla.privacy/sanitize/promptOnSanitize" apt:name="PromptOnSanitize" apt:label="Firefox.privacy.prompt_on_sanitize" oor:type="xs:boolean">
+               <value>true</value>
+               <visual apt:type="checkBox" />
+            </property>sa
+       </section>
+      </page>
+     </category>
+   </category>
+</apt:template>
+
+
+

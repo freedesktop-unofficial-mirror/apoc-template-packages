@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+   <resImport apt:packagePath="org.mozilla.apoc.policies.resource.firefox15_policies" />
+     <category apt:name="Firefox1.5" apt:label="Firefox.firefox1.5" apt:inlineHelp="Firefox.cat_firefox_help">
+      <category apt:name="Privacy" apt:label="Firefox.privacy" apt:inlineHelp="Firefox.cat_privacy_help">
+        <page apt:name="SavedForms" apt:label="Firefox.privacy.saved_forms" apt:inlineHelp="Firefox.privacy.page_saved_forms_help" apt:onlineHelp="/Firefox1.5/General/privSavedForms">
+         <section apt:name="SavedFormInfo" apt:label="Firefox.privacy.saved_form_info">
+             <property apt:dataPath="org.mozilla.browser/formfill/enable" apt:name="EnableFormFill" apt:label="Firefox.privacy.form_fill_enable" oor:type="xs:boolean">
+                <value>true</value>
+                <visual apt:type="checkBox" />
+             </property>
+         </section>
+     </page>
+    </category>
+   </category>
+</apt:template>
+
+
+

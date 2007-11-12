@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+   <resImport apt:packagePath="org.mozilla.apoc.policies.resource.firefox15_policies" />
+     <category apt:name="Firefox1.5" apt:label="Firefox.firefox1.5" apt:inlineHelp="Firefox.cat_firefox_help">
+      <category apt:name="Advnaced" apt:label="Firefox.advanced" apt:inlineHelp="Firefox.cat_advanced_help">
+        <page apt:name="General" apt:label="Firefox.advanced.general" apt:inlineHelp="Firefox.advanced.page_general_help" apt:onlineHelp="/Firefox1.5/Advanced/advGeneral">
+         <section apt:name="Accessibility" apt:label="Firefox.advanced.accessibility">
+            <property apt:dataPath="org.mozilla.accessibility/browsewithcaret" apt:name="BrowseWithCaret" apt:label="Firefox.advanced.browser_with_caret" oor:type="xs:boolean">
+               <value>false</value>
+               <visual apt:type="checkBox" />
+            </property>
+            <property apt:dataPath="org.mozilla.accessibility/typeaheadfind" apt:name="TypeAheadFind" apt:label="Firefox.advanced.typeaheadfind" oor:type="xs:boolean">
+               <value>false</value>
+               <visual apt:type="checkBox" />
+            </property>
+         </section>
+         <section apt:name="AdvBrowing" apt:label="Firefox.advanced.browsing">
+             <property apt:dataPath="org.mozilla.browser/enable_automatic_image_resizing" apt:name="AutomaticImageResizing" apt:label="Firefox.advanced.automatic_image_resizing" oor:type="xs:boolean">
+                <value>true</value>
+                <visual apt:type="checkBox" />
+             </property>
+             <property apt:dataPath="org.mozilla.general/autoScroll" apt:name="AutoScroll" apt:label="Firefox.advanced.auto_scroll" oor:type="xs:boolean">
+                <value>false</value>
+                <visual apt:type="checkBox" />
+             </property>
+             <property apt:dataPath="org.mozilla.general/smoothScroll" apt:name="SmoothScroll" apt:label="Firefox.advanced.smooth_scroll" oor:type="xs:boolean">
+                <value>false</value>
+                <visual apt:type="checkBox" />
+             </property>
+         </section>
+          <section apt:name="LanguagesForWebpages" apt:label="Firefox.advanced.langs_web">
+             <property apt:dataPath="org.mozilla.intl/accept_languages" apt:name="AcceptLanguages" apt:label="Firefox.advanced.page_langs" oor:type="xs:string" apt:inlineHelp="Firefox.nav.page_langs_help">
+                <value>en-us, en</value>
+             </property>
+          </section>
+       </page>
+     </category>
+   </category>
+</apt:template>
+
+
+

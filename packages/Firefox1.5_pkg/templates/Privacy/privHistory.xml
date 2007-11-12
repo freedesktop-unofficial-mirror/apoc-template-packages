@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+   <resImport apt:packagePath="org.mozilla.apoc.policies.resource.firefox15_policies" />
+     <category apt:name="Firefox1.5" apt:label="Firefox.firefox1.5" apt:inlineHelp="Firefox.cat_firefox_help">
+      <category apt:name="Privacy" apt:label="Firefox.Privacy" apt:inlineHelp="Firefox.cat_privacy_help">
+        <page apt:name="History" apt:label="Firefox.privacy.history" apt:inlineHelp="Firefox.privacy.page_history_help" apt:onlineHelp="/Firefox1.5/General/privHistory">
+         <section apt:name="BrowsingHistory" apt:label="Firefox.privacy.browsing">
+            <property apt:dataPath="org.mozilla.browser/history_expire_days" apt:name="HistoryExpireDays" apt:label="Firefox.privacy.hist_length" oor:type="xs:int">
+               <value>9</value>
+            </property>
+         </section>
+     </page>
+    </category>
+   </category>
+</apt:template>
+
+
+

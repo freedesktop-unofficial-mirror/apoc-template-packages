@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+   <resImport apt:packagePath="org.mozilla.apoc.policies.resource.firefox15_policies" />
+     <category apt:name="Firefox1.5" apt:label="Firefox.firefox1.5" apt:inlineHelp="Firefox.cat_firefox_help">
+        <page apt:name="Tabs" apt:label="Firefox.tabs" apt:inlineHelp="Firefox.page_tabs_help" apt:onlineHelp="/Firefox1.5/Tabs/tabs">
+         <section apt:name="General" apt:label="Firefox.tabs.general">
+            <property apt:dataPath="org.mozilla.browser/link/open_external" apt:name="OpenExternal" apt:label="Firefox.tabs.link_open_external" oor:type="xs:int">
+                <constraints>
+                   <enumeration oor:value="1" />
+                   <enumeration oor:value="2" />
+                   <enumeration oor:value="3" />
+                </constraints>
+                <value>1</value>
+                <visual apt:type="radioButtons" />
+            </property>
+            <property apt:dataPath="org.mozilla.browser/link/open_newwindow" apt:name="OpenNewWindow" apt:label="Firefox.tabs.link_open_new_window" oor:type="xs:int">
+                <constraints>
+                   <enumeration oor:value="1" />
+                   <enumeration oor:value="2" />
+                   <enumeration oor:value="3" />
+                </constraints>
+                <value>2</value>
+                <visual apt:type="radioButtons" />
+            <property apt:dataPath="org.mozilla.browser/tabs/autoHide" apt:name="TabAutoHide" apt:label="Firefox.tabs.tab_auto_hide" oor:type="xs:boolean">
+               <value>true</value>
+               <visual apt:type="checkBox" />
+            </property>
+            <property apt:dataPath="org.mozilla.browser/tabs/loadInBackground" apt:name="LoadLinksInBackground" apt:label="Firefox.tabs.open_links_in_background" oor:type="xs:boolean">
+               <value>false</value>
+               <visual apt:type="checkBox" />
+            </property>
+            <property apt:dataPath="org.mozilla.browser/tabs/warnOnClose" apt:name="WarnOnClose" apt:label="Firefox.tabs.warn_on_close" oor:type="xs:boolean">
+               <value>true</value>
+               <visual apt:type="checkBox" />
+            </property>
+         </section>
+     </page>
+   </category>
+</apt:template>
+
+
+

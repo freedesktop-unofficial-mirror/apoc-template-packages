@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+   <resImport apt:packagePath="org.mozilla.apoc.policies.resource.firefox15_policies" />
+     <category apt:name="Firefox1.5" apt:label="Firefox.firefox1.5" apt:inlineHelp="Firefox.cat_firefox_help">
+      <category apt:name="Privacy" apt:label="Firefox.privacy" apt:inlineHelp="Firefox.cat_privacy_help">
+        <page apt:name="Cache" apt:label="Firefox.privacy.cache" apt:inlineHelp="Firefox.privacy.page_cache_help" apt:onlineHelp="/Firefox1.5/General/privCache">
+          <section apt:name="Cache" apt:label="Firefox.privacy.cache">
+             <property apt:dataPath="org.mozilla.browser/cache/disk/capacity" apt:name="DskCapacity" apt:label="Firefox.privacy.cache_capacity" oor:type="xs:int">
+                <value>50000</value>
+             </property>
+          </section>
+     </page>
+    </category>
+   </category>
+</apt:template>
+
+
+

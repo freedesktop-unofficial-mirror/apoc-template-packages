@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+   <resImport apt:packagePath="org.mozilla.apoc.policies.resource.firefox15_policies" />
+     <category apt:name="Firefox1.5" apt:label="Firefox.firefox1.5" apt:inlineHelp="Firefox.cat_firefox_help">
+      <category apt:name="Content" apt:label="Firefox.content" apt:inlineHelp="Firefox.cat_content_help">
+        <page apt:name="Fonts" apt:label="Firefox.content.fonts" apt:inlineHelp="Firefox.content.page_fonts_help" apt:onlineHelp="/Firefox1.5/Content/conFonts">
+         <section apt:name="Fonts" apt:label="Firefox.content.fonts">
+            <property apt:dataPath="org.mozilla.browser/display/use_document_fonts" apt:name="UseDocumentFonts" apt:label="Firefox.content.allow_fonts" oor:type="xs:int">
+		<constraints>
+                    <enumeration oor:value="0" />
+                    <enumeration oor:value="1" />
+		</constraints>
+		<value>1</value>
+		<visual apt:type="radioButtons" />
+            </property>
+             <property apt:dataPath="org.mozilla.intl/charset/default" apt:name="Default" apt:label="Firefox.content.char_coding" oor:type="xs:string" apt:inlineHelp="Firefox.content.char_coding_help">                                                 
+                <value>ISO-8859-1</value>
+             </property>
+         </section>
+     </page>
+    </category>
+   </category>
+</apt:template>
+
+
+

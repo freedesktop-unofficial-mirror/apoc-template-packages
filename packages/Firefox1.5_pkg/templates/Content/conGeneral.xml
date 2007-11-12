@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+   <resImport apt:packagePath="org.mozilla.apoc.policies.resource.firefox15_policies" />
+     <category apt:name="Firefox1.5" apt:label="Firefox.firefox1.5" apt:inlineHelp="Firefox.cat_firefox_help">
+      <category apt:name="Content" apt:label="Firefox.content" apt:inlineHelp="Firefox.cat_content_help">
+        <page apt:name="General" apt:label="Firefox.content.general" apt:inlineHelp="Firefox.content.page_general_help" apt:onlineHelp="/Firefox1.5/Content/conGeneral">
+         <section apt:name="General" apt:label="Firefox.content.general">
+            <property apt:dataPath="org.mozilla.dom/disable_open_during_load" apt:name="DisableOpenDuringLoad" apt:label="Firefox.content.disable_open_during_load" oor:type="xs:boolean">
+               <value>true</value>
+               <visual apt:type="checkBox" />
+            </property>
+            <property apt:dataPath="org.mozilla.xpinstall/whitelist/required" apt:name="enableSoftwareInstall" apt:label="Firefox.content.enable_software_install" oor:type="xs:boolean">
+               <value>true</value>
+               <visual apt:type="checkBox" />
+            </property>
+            <property apt:dataPath="org.mozilla.permissions/default/image" apt:name="DefaultImage" apt:label="Firefox.content.default_image" oor:type="xs:int">
+                <constraints>
+                   <enumeration oor:value="1" />
+                   <enumeration oor:value="2" />
+                   <enumeration oor:value="3" />
+                </constraints>
+                <value>1</value>
+                <visual apt:type="radioButtons" />
+            </property>
+            <property apt:dataPath="org.mozilla.security/enable_java" apt:name="SecurityEnableJava" apt:label="Firefox.content.security_enable_java" oor:type="xs:boolean">
+               <value>true</value>
+               <visual apt:type="checkBox" />
+            </property>
+            <property apt:dataPath="org.mozilla.javascript/enabled" apt:name="JavaScriptEnabled" apt:label="Firefox.content.javascript_enabled" oor:type="xs:boolean">
+               <value>true</value>
+               <visual apt:type="checkBox" />
+            </property>
+         </section>
+     </page>
+    </category>
+   </category>
+</apt:template>
+
+
+

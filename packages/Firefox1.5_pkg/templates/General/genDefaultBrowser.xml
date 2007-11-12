@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE apt:template SYSTEM "policytemplate.dtd">
+<apt:template>
+   <resImport apt:packagePath="org.mozilla.apoc.policies.resource.firefox15_policies" />
+     <category apt:name="Firefox1.5" apt:label="Firefox.firefox1.5" apt:inlineHelp="Firefox.cat_firefox_help">
+      <category apt:name="General" apt:label="Firefox.general" apt:inlineHelp="Firefox.cat_general_help">
+       <page apt:name="DefaultBrowser" apt:label="Firefox.general.defaultbrowser" apt:inlineHelp="Firefox.general.page_defaultbrowser_help" apt:onlineHelp="/Firefox1.5/General/genDefaultBrowser">
+         <section apt:name="DefaultBrowser" apt:label="Firefox.general.defaultbrowser">
+             <property apt:dataPath="org.mozilla.browser/shell/checkDefaultBrowser" apt:name="CheckDefaultBrowser" apt:label="Firefox.general.check_default_browser" oor:type="xs:boolean">
+                <value>true</value>
+                <visual apt:type="checkBox" />
+             </property>
+         </section>
+        </page>
+      </category>
+     </category>
+</apt:template>
