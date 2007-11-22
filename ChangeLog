@@ -1,3 +1,7 @@
+2007-22-11  Alberto Ruiz <alberto.ruiz@sun.com>
+	* Added custom package Makefiles to improve the make install
+	procedure.
+
 2007-12-11  Alberto Ruiz <alberto.ruiz@sun.com>
 	* Added Firefox 1.5 templates.
 

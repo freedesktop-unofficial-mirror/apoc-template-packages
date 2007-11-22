@@ -1,12 +1,4 @@
-pkgsdir=${datadir}/apoc/packages
+SUBDIRS = Evolution1.4_pkg Firefox1.5_pkg Gnome2.6_pkg StarOffice8_pkg
 
-dtddir=${pkgsdir}/dtd
+dtddir=@PKGSDIR@/dtd
 dtd_DATA = dtd/policytemplate.dtd
-
-
-install-data-local:
-	test -z "${pkgsdir}" || mkdir -p "${pkgsdir}"
-	cp -r Evolution1.4_pkg/ ${pkgsdir}
-	cp -r Gnome2.6_pkg/ ${pkgsdir}
-	cp -r Firefox1.5_pkg/ ${pkgsdir}
-	cp -r StarOffice8_pkg/ ${pkgsdir}
