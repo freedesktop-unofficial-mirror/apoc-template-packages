@@ -22,6 +22,7 @@
                 </constraints>
                 <value>2</value>
                 <visual apt:type="radioButtons" />
+            </property>
             <property apt:dataPath="org.mozilla.browser/tabs/autoHide" apt:name="TabAutoHide" apt:label="Firefox.tabs.tab_auto_hide" oor:type="xs:boolean">
                <value>true</value>
                <visual apt:type="checkBox" />
