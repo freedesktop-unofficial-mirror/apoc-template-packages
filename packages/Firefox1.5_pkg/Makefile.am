@@ -19,7 +19,7 @@ advanced_DATA = \
 
 tabsdir = ${pkgbasedir}/Tabs
 tabs_DATA = \
-	templates/Tabs/Tabs.xml \
+	templates/Tabs/Tabs.xml
 
 downloadsdir = ${pkgbasedir}/Downloads
 downloads_DATA = \
