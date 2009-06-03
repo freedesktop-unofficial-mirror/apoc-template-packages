@@ -3,30 +3,30 @@
 <apt:template>
    <resImport apt:packagePath="org.mozilla.apoc.policies.resource.firefox15_policies" />
      <category apt:name="Firefox1.5" apt:label="Firefox.firefox1.5" apt:inlineHelp="Firefox.cat_firefox_help">
-      <category apt:name="Advnaced" apt:label="Firefox.advanced" apt:inlineHelp="Firefox.cat_advanced_help">
+      <category apt:name="Advanced" apt:label="Firefox.advanced" apt:inlineHelp="Firefox.cat_advanced_help">
         <page apt:name="Security" apt:label="Firefox.advanced.security" apt:inlineHelp="Firefox.advanced.page_security_help" apt:onlineHelp="/Firefox1.5/Advanced/advSecurity">
-         <section apt:name="AdvSecurity" apt:label="Firefox.advanced.security">
+          <section apt:name="AdvSecurity" apt:label="Firefox.advanced.security">
             <property apt:dataPath="org.mozilla.security/enable_ssl2" apt:name="EnableSSL2" apt:label="Firefox.advanced.enable_ssl2" oor:type="xs:bool">
-                <value>true</value>
-                <visual apt:type="checkBox" />
+               <value>true</value>
+               <visual apt:type="checkBox" />
             </property>
             <property apt:dataPath="org.mozilla.security/enable_ssl3" apt:name="EnableSSL3" apt:label="Firefox.advanced.enable_ssl3" oor:type="xs:bool">
-                <value>true</value>
-                <visual apt:type="checkBox" />
+               <value>true</value>
+               <visual apt:type="checkBox" />
             </property>
             <property apt:dataPath="org.mozilla.security/enable_tls" apt:name="EnableTLS" apt:label="Firefox.advanced.enable_tls" oor:type="xs:bool">
-                <value>true</value>
-                <visual apt:type="checkBox" />
+               <value>true</value>
+               <visual apt:type="checkBox" />
             </property>
-         </section>
-         <section apt:name="Certificates" apt:label="Firefox.advanced.certificates">
+          </section>
+          <section apt:name="Certificates" apt:label="Firefox.advanced.certificates">
             <property apt:dataPath="org.mozilla.security/default_personal_cert" apt:name="DefaultPersonalCert" apt:label="Firefox.advanced.cert_sel" oor:type="xs:string">
-                <constraints>
-                   <enumeration oor:value="Ask Every Time" />
-                   <enumeration oor:value="Select Automatically" />
-                </constraints>
-                <value>Select Automatically</value>
-                <visual apt:type="radioButtons" />
+               <constraints>
+                  <enumeration oor:value="Ask Every Time" />
+                  <enumeration oor:value="Select Automatically" />
+               </constraints>
+               <value>Select Automatically</value>
+               <visual apt:type="radioButtons" />
             </property>
             <property apt:dataPath="org.mozilla.security/OCSP/enabled" apt:name="OCSPEnabled" apt:label="Firefox.advanced.OCSP" oor:type="xs:int">
                <constraints>
@@ -45,9 +45,10 @@
                <value />
                <visual apt:type="textField" />
             </property>
-         </section>
-    </page>
-   </category>
+          </section>
+        </page>
+      </category>
+     </category>
 </apt:template>
 
 
